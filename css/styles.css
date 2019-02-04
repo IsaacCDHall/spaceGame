@@ -32,13 +32,21 @@ body {
   border: solid 2px green;
   margin:25px;
 }
+.decisionButtonsHidden {
+  width: 200px;
+  height: 200px;
+  color: red;
+  border: solid 2px green;
+  margin:25px;
+  display: none;
+}
 
-#optionOne {
+.decisionLeft {
   position: fixed;
   left: 25%;
 }
 
-#optionTwo {
+.decisionRight {
   position: fixed;
   right: 25%;
 }
@@ -67,4 +75,7 @@ body {
   background-image: url(../img/radar.gif);
   background-size: contain;
   border-radius: 100%;
+}
+#displayNone{
+  display: none;
 }
