@@ -15,14 +15,8 @@ Captain.prototype.recMod=function(food,funds,reputation,population){
   this.funds+=funds;
   this.reputation+=reputation;
   this.population+=population;
+  console.log(this);
 }
-
-// function Event(question,option,food1,food2,funds1,funds2,reputation1,reputation2,population1,population2){
-//   this.question=question;
-//
-// }
-
-
 
 var newCaptain= new Captain("Crunch","Berzerker","easy",10000,10000,10000);
 
@@ -32,37 +26,270 @@ $(document).ready(function(){
   var newCaptain=[];
   // Are you ready? Yes button is same as submit below
   // Should "No" answer take you to Game Over screen? Or reset form?
-  ("#captainForm").submit(function(event){
-    event.preventDefault();
-    var nameInput= $("#nameInput").val();
-    var storyInput= $("#storyInput").val();
-    var difficultyInput= $("#difficultyInput").val();
-    if (difficultyInput==="easy"){
-      newCaptain= new Captain(nameInput,storyInput,difficultyInput,10000,10000,10000);
-    } else if (difficultyInput==="medium"){
-      newCaptain= new Captain(nameInput,storyInput,difficultyInput,1000,1000,1000);
-    } else if (difficultyInput==="hard"){
-      newCaptain= new Captain(nameInput,storyInput,difficultyInput,100,100,100);
-    }
-    $('#question1').show();
-  });
-  $('#questionOne')
-
-  // function changeQuestion(question,one,two,food,){
-  //   $('#question').text(question);
-  //   $('#optionOne').text(one);
-  //   $('#optiontwo').text(two);
+  // ("#captainForm").submit(function(event){
+  //   event.preventDefault();
+  //   var nameInput= $("#nameInput").val();
+  //   var storyInput= $("#storyInput").val();
+  //   var difficultyInput= $("#difficultyInput").val();
+  //   if (difficultyInput==="easy"){
+  //     newCaptain= new Captain(nameInput,storyInput,difficultyInput,10000,10000,10000);
+  //   } else if (difficultyInput==="medium"){
+  //     newCaptain= new Captain(nameInput,storyInput,difficultyInput,1000,1000,1000);
+  //   } else if (difficultyInput==="hard"){
+  //     newCaptain= new Captain(nameInput,storyInput,difficultyInput,100,100,100);
+  //   }
   // });
 
 
-//
-//   function changeQuestion(question){
-//     $('#question').text(question);
-//   }
-// });
-//
-// if(answer==="optionOne"){
-//   newCaptain.recMod(10,-50,10,10)
-// } else if(answer==="optionTwo"){
-//   newCaptain.recMod(10,-50,10,10)
-// }
+  $('#button11').click(function(){
+    $('#question1,#button11,#button12').hide();
+    $('#question2,#button21,#button22').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button12').click(function(){
+    $('#question1,#button11,#button12').hide();
+    $('#question2,#button21,#button22').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button21').click(function(){
+    $('#question2,#button21,#button22').hide();
+    $('#question3,#button31,#button32').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button22').click(function(){
+    $('#question2,#button21,#button22').hide();
+    $('#question3,#button31,#button32').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button31').click(function(){
+    $('#question3,#button31,#button32').hide();
+    $('#question4,#button41,#button42').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button32').click(function(){
+    $('#question3,#button31,#button32').hide();
+    $('#question4,#button41,#button42').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button41').click(function(){
+    $('#question4,#button41,#button42').hide();
+    $('#question5,#button51,#button52').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button42').click(function(){
+    $('#question4,#button41,#button42').hide();
+    $('#question5,#button51,#button52').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button51').click(function(){
+    $('#question5,#button51,#button52').hide();
+    $('#question6,#button61,#button62').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button52').click(function(){
+    $('#question5,#button51,#button52').hide();
+    $('#question6,#button61,#button62').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button61').click(function(){
+    $('#question6,#button61,#button62').hide();
+    $('#question7,#button71,#button72').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button62').click(function(){
+    $('#question6,#button61,#button62').hide();
+    $('#question7,#button71,#button72').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button71').click(function(){
+    $('#question7,#button71,#button72').hide();
+    $('#question8,#button81,#button82').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button72').click(function(){
+    $('#question7,#button71,#button72').hide();
+    $('#question8,#button81,#button82').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button81').click(function(){
+    $('#question8,#button81,#button82').hide();
+    $('#question9,#button91,#button92').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button82').click(function(){
+    $('#question8,#button81,#button82').hide();
+    $('#question9,#button91,#button92').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button91').click(function(){
+    $('#question9,#button91,#button92').hide();
+    $('#question10,#button101,#button102').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button92').click(function(){
+    $('#question9,#button91,#button92').hide();
+    $('#question10,#button101,#button102').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button101').click(function(){
+    $('#question10,#button101,#button102').hide();
+    $('#question11,#button111,#button112').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button102').click(function(){
+    $('#question10,#button101,#button102').hide();
+    $('#question11,#button111,#button112').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button111').click(function(){
+    $('#question11,#button111,#button112').hide();
+    $('#question12,#button121,#button122').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button112').click(function(){
+    $('#question11,#button111,#button112').hide();
+    $('#question12,#button121,#button122').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button121').click(function(){
+    $('#question12,#button121,#button122').hide();
+    $('#question13,#button131,#button132').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button122').click(function(){
+    $('#question12,#button121,#button122').hide();
+    $('#question13,#button131,#button132').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button131').click(function(){
+    $('#question13,#button131,#button132').hide();
+    $('#question14,#button141,#button142').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button132').click(function(){
+    $('#question13,#button131,#button132').hide();
+    $('#question14,#button141,#button142').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button141').click(function(){
+    $('#question14,#button141,#button142').hide();
+    $('#question15,#button151,#button152').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button142').click(function(){
+    $('#question14,#button141,#button142').hide();
+    $('#question15,#button151,#button152').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button151').click(function(){
+    $('#question15,#button151,#button152').hide();
+    $('#question16,#button161,#button162').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button152').click(function(){
+    $('#question15,#button151,#button152').hide();
+    $('#question16,#button161,#button162').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button161').click(function(){
+    $('#question16,#button161,#button162').hide();
+    $('#question17,#button171,#button172').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button162').click(function(){
+    $('#question16,#button161,#button162').hide();
+    $('#question17,#button171,#button172').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button171').click(function(){
+    $('#question17,#button171,#button172').hide();
+    $('#question18,#button181,#button182').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button172').click(function(){
+    $('#question17,#button171,#button172').hide();
+    $('#question18,#button181,#button182').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button181').click(function(){
+    $('#question18,#button181,#button182').hide();
+    $('#question19,#button191,#button192').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button182').click(function(){
+    $('#question18,#button181,#button182').hide();
+    $('#question19,#button191,#button192').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button191').click(function(){
+    $('#question19,#button191,#button192').hide();
+    $('#question20,#button201,#button202').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button192').click(function(){
+    $('#question19,#button191,#button192').hide();
+    $('#question20,#button201,#button202').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button201').click(function(){
+    $('#question20,#button201,#button202').hide();
+    $('#question21,#button211,#button212').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button202').click(function(){
+    $('#question20,#button201,#button202').hide();
+    $('#question21,#button211,#button212').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button211').click(function(){
+    $('#question21,#button211,#button212').hide();
+    $('#question22,#button221,#button222').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button212').click(function(){
+    $('#question21,#button211,#button212').hide();
+    $('#question22,#button221,#button222').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button221').click(function(){
+    $('#question22,#button221,#button222').hide();
+    $('#question22,#button221,#button222').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button222').click(function(){
+    $('#question22,#button221,#button222').hide();
+    $('#question22,#button221,#button222').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button231').click(function(){
+    $('#question23,#button231,#button232').hide();
+    $('#question24,#button241,#button242').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button232').click(function(){
+    $('#question23,#button231,#button232').hide();
+    $('#question24,#button241,#button242').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button241').click(function(){
+    $('#question24,#button241,#button242').hide();
+    $('#question25,#button251,#button252').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button242').click(function(){
+    $('#question24,#button241,#button242').hide();
+    $('#question25,#button251,#button252').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button251').click(function(){
+    $('#question25,#button251,#button252').hide();
+    $('#question2,#button21,#button22').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#button252').click(function(){
+    $('#question25,#button251,#button252').hide();
+    $('#question2,#button21,#button22').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+
+  })
