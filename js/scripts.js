@@ -17,6 +17,13 @@ Captain.prototype.recMod=function(food,funds,reputation,population){
   this.population+=population;
 }
 
+// function Event(question,option,food1,food2,funds1,funds2,reputation1,reputation2,population1,population2){
+//   this.question=question;
+//
+// }
+
+
+
 var newCaptain= new Captain("Crunch","Berzerker","easy",10000,10000,10000);
 
 newCaptain;
@@ -37,17 +44,15 @@ $(document).ready(function(){
     } else if (difficultyInput==="hard"){
       newCaptain= new Captain(nameInput,storyInput,difficultyInput,100,100,100);
     }
-
-    function changeQuestion(question,one,two,food,){
-      $('#question').text(question);
-      $('#optionOne').text(one);
-      $('#optiontwo').text(two);
-    });
-
-
+    $('#question1').show();
   });
+  $('#questionOne')
 
-
+  // function changeQuestion(question,one,two,food,){
+  //   $('#question').text(question);
+  //   $('#optionOne').text(one);
+  //   $('#optiontwo').text(two);
+  // });
 
 
 //
