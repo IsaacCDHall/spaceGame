@@ -17,12 +17,64 @@
         </div>
         <div class="col-lg-10">
           <div id="screen" class="card">
-            <h3>hello</h3>
+            <div class="username">
+              <h3>enter user:</h3>
+              <form id="nameForm" action="index.html" method="post">
+                <input id="nameInput" type="text" value="">
+                <button type="submit"> submit</button>
+              </form>
+            </div>
+            <div class="displayNone" id="routeQuestion">
+              <p>Which path u tryna go, <span class ='nameInput'></span>?</p>
+            </div>
+            <div class="unchartedRoute">
+
+              <div class="displayNone" id="shipwreckQuestion">
+                <p>U tryna see dat shipwreck, <span class ='nameInput'></span>?</p>
+              </div>
+              <div class="displayNone" id="traderQuestion">
+                <p>fucks with dis trader?</p>
+              </div>
+            </div>
+
+
+            <div class="establishedRoute">
+              <div class="displayNone" id="partyQuestion">
+                <p>You like to party, <span class ='nameInput'></span>?</p>
+              </div>
+              <div class="displayNone" id="QuantityParty">
+                <p>How much you like to party, <span class ='nameInput'></span>?</p>
+              </div>
+
+              <div class="displayNone" id="drugsQuestion">
+                <p>do some drugs??</p>
+              </div>
+              <div class="displayNone" id="assQuestion">
+                <p>eat some ass?</p>
+              </div>
+              <div class="displayNone" id="autoPilot">
+                <p>autoPilot?</p>
+              </div>
+              <div class="displayNone" id="AI">
+                <p>repair artficial intelligence stuff upset?</p>
+              </div>
+            </div>
+
+
+
+            <div class="displayNone" id="mars">
+              <p style="font-size: 100px">U win, <span class ='nameInput'></span>?</p>
+            </div>
+            <div class="displayNone" id="dead">
+              <p style="font-size: 100px">U ded, <span class ='nameInput'></span>?</p>
+            </div>
+
           </div>
         </div>
         <div class="col-lg-1">
         </div>
       </div>
+
       <div id="controlPanel" class="card">
         <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
         <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
@@ -37,28 +89,30 @@
         <button class="leftDecoButtons farRightTop" type="button" name="button">0</button>
         <button class="leftDecoButtons farRightBottom" type="button" name="button">0</button>
         <button id="selfDestruct" type="button" name="button">SELF DESTRUCT</button>
-        <button class="decisionButtons decisionLeft" id="button11" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button12" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button21" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button22" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button31" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button32" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button41" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button42" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button51" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button52" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button61" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button62" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button71" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button72" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button81" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button82" type="button">No</button>
+
+
+        <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
+        <button class="decisionButtons decisionRight" id="uncharted" type="button">Uncharted Path</button>
+        <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Yes investigate</button>
+        <button class="decisionButtons decisionRight" id="shipIgnore" type="button">No investigate</button>
+        <button class="decisionButtons decisionLeft" id="traderYes" type="button">trade Yes</button>
+        <button class="decisionButtons decisionRight" id="traderNo" type="button">trade No</button>
+        <button class="decisionButtons decisionLeft" id="partyYes" type="button"> partyYes</button>
+        <button class="decisionButtons decisionRight" id="partyNo" type="button">party No</button>
+        <button class="decisionButtons decisionLeft" id="eatAss" type="button">eat ass</button>
+        <button class="decisionButtons decisionRight" id="noAss" type="button">No eat ass</button>
+        <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Yes auto</button>
+        <button class="decisionButtons decisionRight" id="noAuto" type="button">No auto</button>
+        <button class="decisionButtons decisionLeft" id="repairAI" type="button">Yes repair a hoe</button>
+        <button class="decisionButtons decisionRight" id="noRepairAI" type="button">No leave her</button>
+        <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
+        <button class="decisionButtons decisionRight" id="responsible" type="button">Woah, I got a son!</button>
         <button class="decisionButtons decisionLeft" id="button91" type="button">Yes</button>
         <button class="decisionButtons decisionRight" id="button92" type="button">No</button>
         <button class="decisionButtons decisionLeft" id="button101" type="button">Yes</button>
         <button class="decisionButtons decisionRight" id="button102" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button111" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button112" type="button">No</button>
+        <button class="decisionButtons decisionLeft" id="established1" type="button">Yes</button>
+        <button class="decisionButtons decisionRight" id="established2" type="button">No</button>
         <button class="decisionButtons decisionLeft" id="button121" type="button">Yes</button>
         <button class="decisionButtons decisionRight" id="button122" type="button">No</button>
         <button class="decisionButtons decisionLeft" id="button131" type="button">Yes</button>
