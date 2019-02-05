@@ -18,52 +18,50 @@
         <div class="col-lg-10">
           <div id="screen" class="card">
             <div class="username">
-              <h3>enter user:</h3>
+              <h3>Login:</h3>
               <form id="nameForm" action="index.html" method="post">
-                <input id="nameInput" type="text" value="">
+                <input id="nameInput" type="text" placeholder="enter your name">
                 <button type="submit"> submit</button>
               </form>
             </div>
             <div class="displayNone" id="routeQuestion">
-              <p>Which path u tryna go, <span class ='nameInput'></span>?</p>
+              <p>Processing new data…<span class ='nameInput'></span>, according to my calculations, there is a shorter route traveling through the Regis-8 system. However, this is uncharted territory, and I do not have enough data to determine its safety.</p>
             </div>
             <div class="unchartedRoute">
 
               <div class="displayNone" id="shipwreckQuestion">
-                <p>U tryna see dat shipwreck, <span class ='nameInput'></span>?</p>
+                <p>I have picked up what appears to be a distress signal, but the origin does not match any technology in my database. What do you want to do, <span class ='nameInput'></span>?</p>
               </div>
               <div class="displayNone" id="traderQuestion">
-                <p>fucks with dis trader?</p>
+                <p>Incoming Message: “We don’t see many Star-ships out this way. Should we do business?”</p>
+                <p>-AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
               </div>
             </div>
 
 
             <div class="establishedRoute">
               <div class="displayNone" id="partyQuestion">
-                <p>You like to party, <span class ='nameInput'></span>?</p>
+                <p><span class ='nameInput'></span>, there is unrest in the crew. It has been a long voyage, perhaps they need a morale boost?</p>
               </div>
               <div class="displayNone" id="QuantityParty">
-                <p>How much you like to party, <span class ='nameInput'></span>?</p>
+                <p>Incoming Message: “Oy <span class ='nameInput'></span>, you gonna come throw back some space-beers with us, or what?</p>
               </div>
 
-              <div class="displayNone" id="drugsQuestion">
-                <p>do some drugs??</p>
-              </div>
-              <div class="displayNone" id="assQuestion">
-                <p>eat some ass?</p>
+              <div class="displayNone" id="toastQuestion">
+                <p>I wanted to congradulate you on your self-control <span class ='nameInput'></span>. My audio sensors have detected a 15% increase in positive remarks about you! Let's celebrate! What do you want to do?</p>
               </div>
               <div class="displayNone" id="autoPilot">
-                <p>autoPilot?</p>
+                <p>AI: <span class ='nameInput'></span>, there is a low probability of future collisions. Would you like to engage auto-pilot and cryo-sleep through the remaining voyage?</p>
               </div>
               <div class="displayNone" id="AI">
-                <p>repair artficial intelligence stuff upset?</p>
+                <p>AI: An anomaly has been detected in my Empathy Module. While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
               </div>
             </div>
 
 
 
             <div class="displayNone" id="mars">
-              <p style="font-size: 100px">U win, <span class ='nameInput'></span>?</p>
+              <p>AI: My sensors indicate that we are approaching the NewTerra System. Congratulations on a completing the mission!, <span class ='nameInput'></span>?</p>
             </div>
             <div class="displayNone" id="dead">
               <p style="font-size: 100px">U ded, <span class ='nameInput'></span>?</p>
@@ -93,20 +91,20 @@
 
         <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
         <button class="decisionButtons decisionRight" id="uncharted" type="button">Uncharted Path</button>
-        <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Yes investigate</button>
-        <button class="decisionButtons decisionRight" id="shipIgnore" type="button">No investigate</button>
-        <button class="decisionButtons decisionLeft" id="traderYes" type="button">trade Yes</button>
-        <button class="decisionButtons decisionRight" id="traderNo" type="button">trade No</button>
-        <button class="decisionButtons decisionLeft" id="partyYes" type="button"> partyYes</button>
-        <button class="decisionButtons decisionRight" id="partyNo" type="button">party No</button>
-        <button class="decisionButtons decisionLeft" id="eatAss" type="button">eat ass</button>
-        <button class="decisionButtons decisionRight" id="noAss" type="button">No eat ass</button>
-        <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Yes auto</button>
-        <button class="decisionButtons decisionRight" id="noAuto" type="button">No auto</button>
-        <button class="decisionButtons decisionLeft" id="repairAI" type="button">Yes repair a hoe</button>
-        <button class="decisionButtons decisionRight" id="noRepairAI" type="button">No leave her</button>
+        <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Investigate</button>
+        <button class="decisionButtons decisionRight" id="shipIgnore" type="button">Ignore Signal</button>
+        <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
+        <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
+        <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
+        <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
+        <button class="decisionButtons decisionLeft" id="eatToast" type="button">Eat Toast</button>
+        <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
+        <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
+        <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
+        <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
+        <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
         <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
-        <button class="decisionButtons decisionRight" id="responsible" type="button">Woah, I got a son!</button>
+        <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
         <button class="decisionButtons decisionLeft" id="button91" type="button">Yes</button>
         <button class="decisionButtons decisionRight" id="button92" type="button">No</button>
         <button class="decisionButtons decisionLeft" id="button101" type="button">Yes</button>
@@ -148,3 +146,4 @@
     </div>
   </body>
 </html>
+<!--  line 32 add alien animation or some other indication of distress signal -->

@@ -30,7 +30,8 @@ $(document).ready(function(){
     newCaptain = new Captain(nameInput, 100, 100, 100, 100);
     $('.nameInput').text(nameInput);
     $('form, .username').hide();
-    $('#routeQuestion,#established,#uncharted').show();
+    $('#routeQuestion').slideDown(4000);
+    $('#established,#uncharted').show();
     console.log(newCaptain.name);
     event.preventDefault();
   // Are you ready? Yes button is same as submit below
@@ -47,12 +48,14 @@ $(document).ready(function(){
   });
   $('#established').click(function(){
     $('#routeQuestion,#established,#uncharted').hide();
-    $('#partyQuestion,#partyYes,#partyNo').show();
+    $('#partyQuestion').slideDown(4000);
+    $('#partyYes,#partyNo').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#uncharted').click(function(){
     $('#routeQuestion,#established,#uncharted').hide();
-    $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').show();
+    $('#shipwreckQuestion').slideDown(4000);
+    $('#shipInvestigate,#shipIgnore').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#shipInvestigate').click(function(){
@@ -62,7 +65,8 @@ $(document).ready(function(){
   });
   $('#shipIgnore').click(function(){
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
-    $('#traderQuestion,#traderYes,#traderNo').show();
+    $('#traderQuestion').slideDown(4000);
+    $('#traderYes,#traderNo').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#traderYes').click(function(){
@@ -77,22 +81,36 @@ $(document).ready(function(){
   });
   $('#partyYes').click(function(){
     $('#partyQuestion,#partyYes,#partyNo').hide();
-    $('#QuantityParty,#getWasted,#responsible').show();
+    $('#QuantityParty').slideDown(4000);
+    $('#getWasted,#responsible').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#partyNo').click(function(){
     $('#partyQuestion,#partyYes,#partyNo').hide();
-    $('#assQuestion,#eatAss,#noAss').show();
+    $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
-  $('#eatAss').click(function(){
-    $('#assQuestion,#eatAss,#noAss').hide();
-    $('#autoPilot,#yesAuto,#noAuto').show();
+  $('#getWasted').click(function(){
+    $('#QuantityParty,#getWasted,#responsible').hide();
+    $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
-  $('#noAss').click(function(){
-    $('#assQuestion,#eatAss,#noAss').hide();
-    $('#autoPilot,#yesAuto,#noAuto').show();
+  $('#responsible').click(function(){
+    $('#QuantityParty,#getWasted,#responsible').hide();
+    $('#toastQuestion').slideDown(4000);
+    $('#eatToast,#noToast').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#eatToast').click(function(){
+    $('#toastQuestion,#eatToast,#noToast').hide();
+    $('#autoPilot').slideDown(4000);
+    $('#yesAuto,#noAuto').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#noToast').click(function(){
+    $('#toastQuestion,#eatToast,#noToast').hide();
+    $('#autoPilot').slideDown(4000);
+    $('#yesAuto,#noAuto').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#yesAuto').click(function(){
@@ -102,7 +120,8 @@ $(document).ready(function(){
   });
   $('#noAuto').click(function(){
     $('#autoPilot,#yesAuto,#noAuto').hide();
-    $('#AI,#repairAI,#noRepairAI').show();
+    $('#AI').slideDown(4000);
+    $('#repairAI,#noRepairAI').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#repairAI').click(function(){
@@ -115,16 +134,7 @@ $(document).ready(function(){
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
-  $('#getWasted').click(function(){
-    $('#QuantityParty,#getWasted,#responsible').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,0,0);
-  });
-  $('#responsible').click(function(){
-    $('#QuantityParty,#getWasted,#responsible').hide();
-    $('#autoPilot,#yesAuto,#noAuto').show();
-    newCaptain.recMod(0,0,0,0);
-  });
+
   $('#button91').click(function(){
     $('#question9,#button91,#button92').hide();
     $('#question10,#button101,#button102').show();
