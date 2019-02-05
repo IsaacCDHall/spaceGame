@@ -41,13 +41,12 @@ body {
   border-radius: 10px;
   margin:25px;
 }
-
-#optionOne {
+.decisionLeft {
   position: fixed;
   left: 25%;
 }
 
-#optionTwo {
+.decisionRight {
   position: fixed;
   right: 25%;
 }
@@ -152,8 +151,9 @@ body {
   border: groove 2px gray;
   border-radius: 100%;
 }
-
-
 button {
   box-shadow: 0px 0px 3px black;
+}
+#displayNone{
+  display: none;
 }
