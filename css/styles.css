@@ -4,11 +4,49 @@ body {
   font-family: 'Sarpanch', sans-serif;
 }
 
+#displayPanel {
+  background-image: linear-gradient(#152224 90%, #020A14);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1050px;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 25px;
+  text-align: center;
+  background-color: grey;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+#money {
+  position: fixed;
+  left: 25px;
+  color: white;
+}
+
+#food {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+#reputation {
+  position: fixed;
+  right: 25px;
+  color: white;
+}
+
+
 #screen {
   padding: 15px;
-  margin-top: 25px;
+  margin-top: 55px;
   width: 866PX;
-  height: 400px;
+  height: 600px;
   background-color: rgba(0, 0, 0, 0.3);
   color: lime;
   text-shadow: 0px 0px 4px rgba(0, 255, 0, 0.75);
@@ -37,7 +75,8 @@ body {
   width: 200px;
   height: 200px;
   color: red;
-  border: solid 2px green;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 2px gray;
   border-radius: 10px;
   margin:25px;
   display: none;
@@ -57,7 +96,7 @@ body {
   height: 25px;
   border-radius: 100%;
   color: rgba(0, 0, 0, 0);
-  background-image: repeating-radial-gradient(red, darkred);
+  background-image: repeating-radial-gradient(red 80%, darkred);
 }
 
 .farLeft {
@@ -69,56 +108,56 @@ body {
   position: fixed;
   top:30px;
   left: 80px;
-  background-image: repeating-radial-gradient(orange, darkorange);
+  background-image: repeating-radial-gradient(orange 80%, darkorange);
 }
 
 .centerLeftBottom {
   position: fixed;
   top: 85px;
   left: 80px;
-  background-image: repeating-radial-gradient(orange, darkorange);
+  background-image: repeating-radial-gradient(orange 80%, darkorange);
 }
 
 .centerTop {
   position: fixed;
   top:30px;
   left: 135px;
-  background-image: repeating-radial-gradient(yellow, orange);
+  background-image: repeating-radial-gradient(yellow 80%, orange);
 }
 
 .centerBottom {
   position: fixed;
   top: 85px;
   left: 135px;
-  background-image: repeating-radial-gradient(yellow, orange);
+  background-image: repeating-radial-gradient(yellow 80%, orange);
 }
 
 .centerRightTop {
   position: fixed;
   top: 30px;
   left: 190px;
-  background-image: repeating-radial-gradient(lightgreen, green);
+  background-image: repeating-radial-gradient(lightgreen 80%, green);
 }
 
 .centerRightBottom {
   position: fixed;
   top: 85px;
   left: 190px;
-  background-image: repeating-radial-gradient(lightgreen, green);
+  background-image: repeating-radial-gradient(lightgreen 80%, green);
 }
 
 .farRightTop {
   position: fixed;
   top: 30px;
   left: 245px;
-  background-image: repeating-radial-gradient(blue, darkblue);
+  background-image: repeating-radial-gradient(blue 80%, darkblue);
 }
 
 .farRightBottom {
   position: fixed;
   top: 85px;
   left: 245px;
-  background-image: repeating-radial-gradient(blue, darkblue);
+  background-image: repeating-radial-gradient(blue 80%, darkblue);
 }
 
 
@@ -135,6 +174,7 @@ body {
   font-size: 25px;
   font-weight: bold;
   text-shadow: 2px 2px 1px darkred;
+  color: white;
 }
 
 #selfDestruct:hover {
@@ -152,6 +192,13 @@ body {
   border: groove 2px gray;
   border-radius: 100%;
 }
+
+#fuelGauge {
+  position: fixed;
+  right: 140px;
+  top: 105px;
+}
+
 button {
   box-shadow: 0px 0px 3px black;
 }

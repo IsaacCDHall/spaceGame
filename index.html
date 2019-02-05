@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="css/circle.css">
     <link href="https://fonts.googleapis.com/css?family=Sarpanch" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -12,6 +13,11 @@
   </head>
   <body>
     <div class="container">
+      <div id="displayPanel">
+        <p id="money">Credits Remaining: $<span id="moneyValue">100,000</span></p>
+        <p id="food">Rations Remaining: <span id="foodValue">5,000</span> </p>
+        <p id="reputation">Reputation Level: <span id="reputationValue"></span>35%</p>
+      </div>
       <div class="row">
         <div class="col-lg-1">
         </div>
@@ -89,6 +95,15 @@
         <button class="leftDecoButtons farRightTop" type="button" name="button">0</button>
         <button class="leftDecoButtons farRightBottom" type="button" name="button">0</button>
         <button id="selfDestruct" type="button" name="button">SELF DESTRUCT</button>
+        <div id="fuelGauge">
+          <div class="c100 p25 orange">
+            <span>Fuel</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+        </div>
 
 
         <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
