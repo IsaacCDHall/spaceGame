@@ -26,13 +26,18 @@ Captain.prototype.recMod=function(food,funds,reputation,population){
 $(document).ready(function(){
   var newCaptain;
   $("#nameForm").submit(function(event){
+
     var nameInput= $("#nameInput").val();
     newCaptain = new Captain(nameInput, 100, 100, 100, 100);
     $('.nameInput').text(nameInput);
+    $('#moneyValue').text(newCaptain.funds+",000");
+    $('#foodValue').text(newCaptain.food +",000");
+    $('#reputationValue').text(newCaptain.reputation + "%");
     $('form, .username').hide();
     $('#routeQuestion').slideDown(4000);
     $('#established,#uncharted').show();
     console.log(newCaptain.name);
+
     event.preventDefault();
   // Are you ready? Yes button is same as submit below
   // Should "No" answer take you to Game Over screen? Or reset form?
