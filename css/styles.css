@@ -8,12 +8,20 @@
   animation-delay:3.5s;
 }
 body {
-  background-image: url(../img/cockpit.png);
+  background-image: url(../img/start.png);
   background-size: cover;
   background-position: center;
   min-width: 100vw;
   min-height: 100vh;
   font-family: 'Sarpanch', sans-serif;
+}
+
+.cockpit {
+  background-image: url(../img/cockpit.png);
+  background-size: cover;
+  background-position: center;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 #displayPanel {
