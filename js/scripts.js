@@ -65,7 +65,32 @@ $(document).ready(function(){
   });
   $('#shipInvestigate').click(function(){
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
+    $('#alienQuestion').slideDown(4000);
+    $('#rescueAlien,#ignoreAlien').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#rescueAlien').click(function(){
+    $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
+    $('#motherShipQuestion').slideDown(4000);
+    $('#fleeShip,#returnAlien').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#fleeShip').click(function(){
+    $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
     $('#dead').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#returnAlien').click(function(){
+    $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
+    $('#traderQuestion').slideDown(4000);
+    $('#traderYes,#traderNo').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#ignoreAlien').click(function(){
+    $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
+    $('#traderQuestion').slideDown(4000);
+    // lose fuel
+    $('#traderYes,#traderNo').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#shipIgnore').click(function(){
