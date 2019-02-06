@@ -76,12 +76,12 @@ $(document).ready(function(){
     newCaptain.recMod(0,0,0,0);
   });
   $('#fleeShip').click(function(){
-    $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
+    $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#returnAlien').click(function(){
-    $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
+    $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
     $('#traderQuestion').slideDown(4000);
     $('#traderYes,#traderNo').show();
     newCaptain.recMod(0,0,0,0);
