@@ -125,13 +125,68 @@ $(document).ready(function(){
   //when user doesnt investigate shipwreck
   $('#shipIgnore').click(function(){
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
+    $('#upsetCrew').slideDown(4000);
+    $('#beRude,#beNice').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#beRude').click(function(){
+    $('#upsetCrew,#beRude,#beNice').hide();
+    $('#crewDisobey').slideDown(4000);
+    $('#leaveCrew,#helpCrewRude').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#beNice').click(function(){
+    $('#upsetCrew,#beRude,#beNice').hide();
+    $('#crewDisobey').slideDown(4000);
+    $('#leaveCrew,#helpCrewNice').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#leaveCrew').click(function(){
+    $('#crewDisobey,#leaveCrew,#helpCrewRude,#helpCrewNice').hide();
     $('#traderQuestion').slideDown(4000);
     $('#screen').prepend('<p class="animated fadeOut">Tension dissipates as you fly past the wreck</p>');
     $('#traderYes,#traderNo').show();
 
     newCaptain.recMod(-30,0,20,-10);
   });
+
+  $('#helpCrewRude').click(function(){
+    $('#crewDisobey,#leaveCrew,#helpCrewRude').hide();
+    $('#emptyShipwreck').slideDown(4000);
+    $('#takeFunds,#takeFood').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#takeFunds').click(function(){
+    $('#emptyShipwreck,#takeFood,#takeFunds').hide();
+    $('#traderQuestion').slideDown(4000);
+    $('#traderNo,#traderYes').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#takeFood').click(function(){
+    $('#emptyShipwreck,#takeFood,#takeFunds').hide();
+    $('#traderQuestion').slideDown(4000);
+    $('#traderNo,#traderYes').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#helpCrewNice').click(function(){
+    $('#crewDisobey,#leaveCrew,#helpCrewNice').hide();
+    $('#shipwreckTrap').slideDown(4000);
+    $('#bargainTrap,#runTrap').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#bargainTrap').click(function(){
+    $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
+    $('#dead').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#runTrap').click(function(){
+    $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
+    $('#dead').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+
 //when user decides to trade with the shady dude
+
   $('#traderYes').click(function(){
     $('#traderQuestion,#traderYes,#traderNo').hide();
     $('#dead').show();
