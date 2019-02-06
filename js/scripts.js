@@ -53,30 +53,35 @@ $(document).ready(function(){
     // }
   });
   $('#established').click(function(){
+    $("body").css({"background-image": "url(img/party.png)"})
     $('#routeQuestion,#established,#uncharted').hide();
     $('#partyQuestion').slideDown(4000);
     $('#partyYes,#partyNo').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#uncharted').click(function(){
+    $("body").css({"background-image": "url(img/uncharted.png)"})
     $('#routeQuestion,#established,#uncharted').hide();
     $('#shipwreckQuestion').slideDown(4000);
     $('#shipInvestigate,#shipIgnore').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#shipInvestigate').click(function(){
+    $("body").css({"background-image": "url(img/wreck.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
     $('#alienQuestion').slideDown(4000);
     $('#rescueAlien,#ignoreAlien').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#rescueAlien').click(function(){
+    $("body").css({"background-image": "url(img/wreckinvestigate.png)"})
     $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
     $('#motherShipQuestion').slideDown(4000);
     $('#fleeShip,#returnAlien').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#fleeShip').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
@@ -88,6 +93,7 @@ $(document).ready(function(){
     newCaptain.recMod(0,0,0,0);
   });
   $('#ignoreAlien').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
     $('#traderQuestion').slideDown(4000);
     // lose fuel
@@ -95,22 +101,26 @@ $(document).ready(function(){
     newCaptain.recMod(0,0,0,0);
   });
   $('#shipIgnore').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
     $('#traderQuestion').slideDown(4000);
     $('#traderYes,#traderNo').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#traderYes').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#traderQuestion,#traderYes,#traderNo').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#traderNo').click(function(){
+    $("body").css({"background-image": "url(img/home.png)"})
     $('#traderQuestion,#traderYes,#traderNo').hide();
     $('#mars').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#partyYes').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitparty.png)"})
     $('#partyQuestion,#partyYes,#partyNo').hide();
     $('#QuantityParty').slideDown(4000);
     $('#getWasted,#responsible').show();
@@ -122,11 +132,13 @@ $(document).ready(function(){
     newCaptain.recMod(0,0,0,0);
   });
   $('#getWasted').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#QuantityParty,#getWasted,#responsible').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#responsible').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpit.png)"})
     $('#QuantityParty,#getWasted,#responsible').hide();
     $('#toastQuestion').slideDown(4000);
     $('#eatToast,#noToast').show();
@@ -145,6 +157,8 @@ $(document).ready(function(){
     newCaptain.recMod(0,0,0,0);
   });
   $('#yesAuto').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
+    $("body").css({"background-image": "url(img/asteroids.png)"})
     $('#autoPilot,#yesAuto,#noAuto').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
