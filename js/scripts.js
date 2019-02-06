@@ -70,6 +70,7 @@ $(document).ready(function(){
 
   //when user clicks on Established Path
   $('#established').click(function(){
+    $("body").css({"background-image": "url(img/party.png)"})
     $('#routeQuestion,#established,#uncharted').hide();
     $('#partyQuestion').slideDown(4000);
     $('#partyYes,#partyNo').show();
@@ -78,6 +79,7 @@ $(document).ready(function(){
 
   //when user clicks on uncharted Path
   $('#uncharted').click(function(){
+    $("body").css({"background-image": "url(img/uncharted.png)"})
     $('#routeQuestion,#established,#uncharted').hide();
     $('#shipwreckQuestion').slideDown(4000);
     $('#shipInvestigate,#shipIgnore').show();
@@ -85,6 +87,7 @@ $(document).ready(function(){
   });
   //when user investigates shipwreck
   $('#shipInvestigate').click(function(){
+    $("body").css({"background-image": "url(img/wreck.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
     $('#alienQuestion').slideDown(4000);
     $('#screen').prepend('<p class="animated fadeOut">Your crew seems cautious</p>');
@@ -94,6 +97,7 @@ $(document).ready(function(){
 
   //when user chooses to send rescue team
   $('#rescueAlien').click(function(){
+    $("body").css({"background-image": "url(img/wreckinvestigate.png)"})
     $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
     $('#screen').prepend('<p class="animated fadeOut">Your dog seems happier with you </p>');
     $('#motherShipQuestion').slideDown(4000);
@@ -103,6 +107,7 @@ $(document).ready(function(){
 
   //when user runs away from aliens
   $('#fleeShip').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,-50,-10);
@@ -116,6 +121,7 @@ $(document).ready(function(){
   });
   //when user clicks on Keep Going button instead of sending rescue team
   $('#ignoreAlien').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
     $('#traderQuestion').slideDown(4000);
     // lose fuel
@@ -124,27 +130,86 @@ $(document).ready(function(){
   });
   //when user doesnt investigate shipwreck
   $('#shipIgnore').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
+    $('#upsetCrew').slideDown(4000);
+    $('#beRude,#beNice').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#beRude').click(function(){
+    $('#upsetCrew,#beRude,#beNice').hide();
+    $('#crewDisobey').slideDown(4000);
+    $('#leaveCrew,#helpCrewRude').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#beNice').click(function(){
+    $('#upsetCrew,#beRude,#beNice').hide();
+    $('#crewDisobey').slideDown(4000);
+    $('#leaveCrew,#helpCrewNice').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#leaveCrew').click(function(){
+    $('#crewDisobey,#leaveCrew,#helpCrewRude,#helpCrewNice').hide();
     $('#traderQuestion').slideDown(4000);
     $('#screen').prepend('<p class="animated fadeOut">Tension dissipates as you fly past the wreck</p>');
     $('#traderYes,#traderNo').show();
 
     newCaptain.recMod(-30,0,20,-10);
   });
+
+  $('#helpCrewRude').click(function(){
+    $('#crewDisobey,#leaveCrew,#helpCrewRude').hide();
+    $('#emptyShipwreck').slideDown(4000);
+    $('#takeFunds,#takeFood').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#takeFunds').click(function(){
+    $('#emptyShipwreck,#takeFood,#takeFunds').hide();
+    $('#traderQuestion').slideDown(4000);
+    $('#traderNo,#traderYes').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#takeFood').click(function(){
+    $('#emptyShipwreck,#takeFood,#takeFunds').hide();
+    $('#traderQuestion').slideDown(4000);
+    $('#traderNo,#traderYes').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#helpCrewNice').click(function(){
+    $('#crewDisobey,#leaveCrew,#helpCrewNice').hide();
+    $('#shipwreckTrap').slideDown(4000);
+    $('#bargainTrap,#runTrap').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#bargainTrap').click(function(){
+    $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
+    $('#dead').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#runTrap').click(function(){
+    $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
+    $('#dead').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+
 //when user decides to trade with the shady dude
+
   $('#traderYes').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#traderQuestion,#traderYes,#traderNo').hide();
     $('#dead').show();
     newCaptain.recMod(-30,0,0,-10);
   });
   //when decides not to trade with shady dude
   $('#traderNo').click(function(){
+    $("body").css({"background-image": "url(img/home.png)"})
     $('#traderQuestion,#traderYes,#traderNo').hide();
     $('#mars').show();
     newCaptain.recMod(-30,0,0,-10);
   });
   //when user decides to party
   $('#partyYes').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitparty.png)"})
     $('#partyQuestion,#partyYes,#partyNo').hide();
     $('#QuantityParty').slideDown(4000);
     $('#getWasted,#responsible').show();
@@ -158,12 +223,14 @@ $(document).ready(function(){
   });
   //When user gets rickety wrecked
   $('#getWasted').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#QuantityParty,#getWasted,#responsible').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,+50,0);
   });
   //when user thinks about his children and decides not to get too drunk
   $('#responsible').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpit.png)"})
     $('#QuantityParty,#getWasted,#responsible').hide();
     $('#toastQuestion').slideDown(4000);
     $('#eatToast,#noToast').show();
@@ -185,6 +252,8 @@ $(document).ready(function(){
   });
   // user decides to do auto pilot
   $('#yesAuto').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
+    $("body").css({"background-image": "url(img/asteroids.png)"})
     $('#autoPilot,#yesAuto,#noAuto').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,-30);
