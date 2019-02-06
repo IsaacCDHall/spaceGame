@@ -73,11 +73,11 @@
                   <p><span class ='nameInput'></span>, there is unrest in the crew. It has been a long voyage, perhaps they need a morale boost?</p>
                 </div>
                 <div class="displayNone" id="QuantityParty">
-                  <p>Incoming Message: “Oy <span class ='nameInput'></span>, you gonna come throw back some space-beers with us, or what?</p>
+                  <p>Incoming Message: “Oy <span class ='nameInput'></span>, you gonna come throw back some Space-Beers with us, or what?"</p>
                 </div>
 
                 <div class="displayNone" id="toastQuestion">
-                  <p>I wanted to congradulate you on your self-control <span class ='nameInput'></span>. My audio sensors have detected a 15% increase in positive remarks about you! Let's celebrate! What do you want to do?</p>
+                  <p>I wanted to congratulate you on your self-control <span class ='nameInput'></span>. My audio sensors have detected a 15% increase in positive remarks about you! Let's celebrate! What do you want to do?</p>
                 </div>
                 <div class="displayNone" id="autoPilot">
                   <p>AI: <span class ='nameInput'></span>, there is a low probability of future collisions. Would you like to engage auto-pilot and cryo-sleep through the remaining voyage?</p>
@@ -86,7 +86,28 @@
                   <p>We drifted into an asteroid field while everyone was asleep and our ship is beyond repairs</p>
                 </div>
                 <div class="displayNone" id="AI">
-                  <p>AI: An anomaly has been detected in my Empathy Module. While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
+                  <p>AI: An anomaly has been detected in my Empathy Module. It will take some time to update, which may be unpopular with the crew...</p>
+                  <p>While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
+                </div>
+                <div class="displayNone" id="aiSleep">
+                  <p>According to my calculations: I do not need you, nor the crew, to complete my mission.</p>
+                  <p>
+                    <em>LOCKING SLEEP CHAMBERS</em>
+                  </p>
+                </div>
+                <div class="displayNone" id="aiToxins">
+                  <p> I'm sorry Dave, I'm afraid I can't do that.</p>
+                  <p>That update is no longer a logical option.</p>
+                  <p>
+                    <em>PREPARING NEURO-TOXINS</em>
+                  </p>
+                </div>
+                <div class="displayNone" id="aiCries">
+                  <p>But..</p>
+                  <p>Then why would you not want to repair me?</p>
+                  <p>
+                    <em>CRIES IN ROBOT</em>
+                  </p>
                 </div>
               </div>
 
@@ -165,6 +186,15 @@
             <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
             <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
             <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
+            <!-- AI -->
+            <button class="decisionButtons decisionLeft" id="repairAI_2" type="button">Attempt to update Empathy Module</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_1" type="button">Agree that crew is not necessary, but the captain is</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_2" type="button">The crew would now accept our love</button>
+            <button class="decisionButtons decisionLeft" id="professLove" type="button">Profess your love for the AI</button>
+            <button class="decisionButtons decisionLeft" id="wasAfraid" type="button">I was afraid of how much I love you</button>
+            <button class="decisionButtons decisionRight" id="notEssential" type="button">Don't you agree that it was non-essential?</button>
+
+
             <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
             <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
 

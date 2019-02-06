@@ -286,14 +286,61 @@ $(document).ready(function(){
   $('#repairAI').click(function(){
     $('#AI,#repairAI,#noRepairAI').hide();
     $('#mars').show();
-    newCaptain.recMod(0,0,10,0);
+    newCaptain.recMod(0,0,-30,0);
   });
   // user doesnt fix the AI
   $('#noRepairAI').click(function(){
     $('#AI,#repairAI,#noRepairAI').hide();
+    $('#aiSleep').slideDown(4000);
+    $('#repairAI_2,#betrayCrew_1').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#betrayCrew_1').click(function(){
+    $('#aiSleep,#repairAI_2,#betrayCrew_1').hide();
+    $('#mars').show();
+    newCaptain.recMod(0,0,-50,0);
+  });
+
+  $('#repairAI_2').click(function(){
+    $('#aiSleep,#repairAI_2,#betrayCrew_1').hide();
+    $('#aiToxins').slideDown(4000);
+    $('#professLove,#notEssential').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+  $('#notEssential').click(function(){
+    $('#professLove,#notEssential,#aiToxins').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,-30,0);
   });
+
+  $('#professLove').click(function(){
+    $('#professLove,#notEssential,#aiToxins').hide();
+    $('#aiCries').slideDown(4000);
+    $('#wasAfraid,#betrayCrew_2').show();
+    newCaptain.recMod(0,0,-30,0);
+  });
+  $('#betrayCrew_2').click(function(){
+    $('#professLove,#betrayCrew_2,#aiToxins').hide();
+    $('#mars').show();
+    newCaptain.recMod(0,0,-50,0);
+  });
+  $('#wasAfraid').click(function(){
+    $('#wasAfraid,#betrayCrew_2,#aiCries').hide();
+    $('#mars').show();
+    newCaptain.recMod(0,0,-30,0);
+  });
+
+  $('#betrayCrew').click(function(){
+    $('#AI,#repairAI,#noRepairAI').hide();
+    $('#dead').show();
+    newCaptain.recMod(0,0,-30,0);
+  });
+
+
+
+
+
+
   $('#selfDestruct').click(function(){
     $('body').addClass('displayNone');
 
