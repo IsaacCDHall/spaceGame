@@ -38,6 +38,16 @@
               <div class="displayNone" id="shipwreckQuestion">
                 <p>I have picked up what appears to be a distress signal, but the origin does not match any technology in my database. What do you want to do, <span class ='nameInput'></span>?</p>
               </div>
+              <div class="displayNone" id="alienQuestion">
+                <p>My Bio-scanner indicates that there is life on board the ship, but it is not human. How do you want to proceed?</p>
+              </div>
+              <div class="displayNone" id="motherShipQuestion">
+                <p>We are being approached by a large Starship. I am also detecting a match in bio-signature between the life-form we rescued, and those on board the Starship.</p>
+                <p>I have no data on their technology, but my visual scanner detects what may be powerful blasting cannons</p>
+                <p>Incoming Message: "GERARAARRR, SSSSLLLLAANNNDND"</p>
+                <p>--Translation: No known Translation</p>
+                <p>They are making an attempt to board the ship.</p>
+              </div>
               <div class="displayNone" id="traderQuestion">
                 <p>Incoming Message: “We don’t see many Star-ships out this way. Should we do business?”</p>
                 <p>-AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
@@ -63,8 +73,6 @@
                 <p>AI: An anomaly has been detected in my Empathy Module. While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
               </div>
             </div>
-
-
 
             <div class="displayNone" id="mars">
               <p>AI: My sensors indicate that we are approaching the NewTerra System. Congratulations on a completing the mission!, <span class ='nameInput'></span>?</p>
@@ -105,57 +113,35 @@
           </div>
 
 
-          <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
-          <button class="decisionButtons decisionRight" id="uncharted" type="button">Uncharted Path</button>
-          <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Investigate</button>
-          <button class="decisionButtons decisionRight" id="shipIgnore" type="button">Ignore Signal</button>
-          <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
-          <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
-          <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
-          <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
-          <button class="decisionButtons decisionLeft" id="eatToast" type="button">Eat Toast</button>
-          <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
-          <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
-          <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
-          <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
-          <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
-          <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
-          <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
-          <button class="decisionButtons decisionLeft" id="button91" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button92" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button101" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button102" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="established1" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="established2" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button121" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button122" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button131" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button132" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button141" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button142" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button151" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button152" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button161" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button162" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button171" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button172" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button181" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button182" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button191" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button192" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button201" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button202" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button211" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button212" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button221" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button222" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button231" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button232" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button241" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button242" type="button">No</button>
-          <button class="decisionButtons decisionLeft" id="button251" type="button">Yes</button>
-          <button class="decisionButtons decisionRight" id="button252" type="button">No</button>
-          <div id="radar" class="card">
+        <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
+        <button class="decisionButtons decisionRight" id="uncharted" type="button">Uncharted Path</button>
+        <!--Uncharted  -->
+        <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Investigate</button>
+        <button class="decisionButtons decisionRight" id="shipIgnore" type="button">Don't investigate</button>
+        <!--Alien Branch -->
+        <button class="decisionButtons decisionRight" id="rescueAlien" type="button">Send a Rescue Team</button>
+        <button class="decisionButtons decisionLeft" id="ignoreAlien" type="button">Keep Going</button>
+
+        <button class="decisionButtons decisionLeft" id="fleeShip" type="button">Try to outrun them</button>
+        <button class="decisionButtons decisionRight" id="returnAlien" type="button">Let aliens board ship</button>
+
+
+
+        <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
+        <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
+        <!--Charted  -->
+        <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
+        <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
+        <button class="decisionButtons decisionLeft" id="eatToast" type="button">Eat Toast</button>
+        <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
+        <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
+        <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
+        <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
+        <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
+        <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
+        <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
+
+        <div id="radar" class="card">
 
           </div>
         </div>
