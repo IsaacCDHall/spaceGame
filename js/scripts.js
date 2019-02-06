@@ -264,10 +264,24 @@ $(document).ready(function(){
   // user decides against autopilot
   $('#noAuto').click(function(){
     $('#autoPilot,#yesAuto,#noAuto').hide();
-    $('#AI').slideDown(2500);
-    $('#repairAI,#noRepairAI').show();
-    newCaptain.recMod(-20,0,0,-10);
+    $('#asteroidEscape').slideDown(2500);
+    $('#dropFood,#extraFuel').show();
+    newCaptain.recMod(0,0,0,0);
   });
+  //lose food to escape
+    $('#dropFood').click(function(){
+      $('#asteroidEscape,#dropFood,#extraFuel').hide();
+      $('#AI').slideDown(2500);
+      $('#repairAI,#noRepairAI').show();
+      newCaptain.recMod(-50,0,0,0);
+    });
+    //lose fuel to escape
+    $('#extraFuel').click(function(){
+      $('#asteroidEscape,#dropFood,#extraFuel').hide();
+      $('#AI').slideDown(2500);
+      $('#repairAI,#noRepairAI').show();
+      newCaptain.recMod(0,0,0,-50);
+    });
   // user chooses to repair AI
   $('#repairAI').click(function(){
     $('#AI,#repairAI,#noRepairAI').hide();
