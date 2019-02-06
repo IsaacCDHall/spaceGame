@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-      <div id="displayPanel">
+      <div id="displayPanel" class="displayNone">
         <p id="money">Credits Remaining: $<span id="moneyValue"> </span></p>
         <p id="food">Rations Remaining: <span id="foodValue"> </span></p>
         <p id="reputation">Reputation Level: <span id="reputationValue"></span></p>
@@ -78,86 +78,90 @@
         <div class="col-lg-1">
         </div>
       </div>
+      <div id="dontDeleteThisDiv">
 
-      <div id="controlPanel" class="card">
-        <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
-        <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
-        <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
-        <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
-        <button class="leftDecoButtons centerLeftTop" type="button" name="button">0</button>
-        <button class="leftDecoButtons centerLeftBottom" type="button" name="button">0</button>
-        <button class="leftDecoButtons centerTop" type="button" name="button">0</button>
-        <button class="leftDecoButtons centerBottom" type="button" name="button">0</button>
-        <button class="leftDecoButtons centerRightTop" type="button" name="button">0</button>
-        <button class="leftDecoButtons centerRightBottom" type="button" name="button">0</button>
-        <button class="leftDecoButtons farRightTop" type="button" name="button">0</button>
-        <button class="leftDecoButtons farRightBottom" type="button" name="button">0</button>
-        <button id="selfDestruct" type="button" name="button">SELF DESTRUCT</button>
-        <div id="fuelGauge">
-          <div class="c100 p50 orange">
-            <span>Fuel</span>
-            <div class="slice">
-              <div class="bar"></div>
-              <div class="fill"></div>
+        <div id="controlPanel" class="card">
+          <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+          <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+          <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+          <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+          <button class="leftDecoButtons centerLeftTop" type="button" name="button">0</button>
+          <button class="leftDecoButtons centerLeftBottom" type="button" name="button">0</button>
+          <button class="leftDecoButtons centerTop" type="button" name="button">0</button>
+          <button class="leftDecoButtons centerBottom" type="button" name="button">0</button>
+          <button class="leftDecoButtons centerRightTop" type="button" name="button">0</button>
+          <button class="leftDecoButtons centerRightBottom" type="button" name="button">0</button>
+          <button class="leftDecoButtons farRightTop" type="button" name="button">0</button>
+          <button class="leftDecoButtons farRightBottom" type="button" name="button">0</button>
+          <button id="selfDestruct" type="button" name="button">SELF DESTRUCT</button>
+          <div id="fuelGauge">
+            <div class="c100 p50 orange">
+              <span>Fuel</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
             </div>
           </div>
+
+
+          <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
+          <button class="decisionButtons decisionRight" id="uncharted" type="button">Uncharted Path</button>
+          <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Investigate</button>
+          <button class="decisionButtons decisionRight" id="shipIgnore" type="button">Ignore Signal</button>
+          <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
+          <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
+          <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
+          <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
+          <button class="decisionButtons decisionLeft" id="eatToast" type="button">Eat Toast</button>
+          <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
+          <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
+          <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
+          <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
+          <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
+          <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
+          <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
+          <button class="decisionButtons decisionLeft" id="button91" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button92" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button101" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button102" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="established1" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="established2" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button121" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button122" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button131" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button132" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button141" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button142" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button151" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button152" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button161" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button162" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button171" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button172" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button181" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button182" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button191" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button192" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button201" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button202" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button211" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button212" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button221" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button222" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button231" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button232" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button241" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button242" type="button">No</button>
+          <button class="decisionButtons decisionLeft" id="button251" type="button">Yes</button>
+          <button class="decisionButtons decisionRight" id="button252" type="button">No</button>
+          <div id="radar" class="card">
+
+          </div>
         </div>
+    </div>
 
 
-        <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
-        <button class="decisionButtons decisionRight" id="uncharted" type="button">Uncharted Path</button>
-        <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Investigate</button>
-        <button class="decisionButtons decisionRight" id="shipIgnore" type="button">Ignore Signal</button>
-        <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
-        <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
-        <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
-        <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
-        <button class="decisionButtons decisionLeft" id="eatToast" type="button">Eat Toast</button>
-        <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
-        <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
-        <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
-        <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
-        <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
-        <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
-        <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
-        <button class="decisionButtons decisionLeft" id="button91" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button92" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button101" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button102" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="established1" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="established2" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button121" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button122" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button131" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button132" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button141" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button142" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button151" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button152" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button161" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button162" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button171" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button172" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button181" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button182" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button191" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button192" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button201" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button202" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button211" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button212" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button221" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button222" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button231" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button232" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button241" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button242" type="button">No</button>
-        <button class="decisionButtons decisionLeft" id="button251" type="button">Yes</button>
-        <button class="decisionButtons decisionRight" id="button252" type="button">No</button>
-        <div id="radar" class="card">
-
-        </div>
-      </div>
     </div>
   </body>
 </html>

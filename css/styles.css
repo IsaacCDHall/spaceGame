@@ -1,3 +1,12 @@
+
+.slideInUp{
+  animation-delay: 4s;
+  animation-duration: 3s;
+}
+.slideInDown{
+  animation-duration: 3s;
+  animation-delay:4.5s;
+}
 body {
   background-image: url(../img/cockpit.png);
   background-size: cover;
@@ -11,7 +20,7 @@ body {
   background-image: linear-gradient(#152224 90%, #020A14);
   position: fixed;
   top: 0;
-  left: 50%;
+  margin: center;
   transform: translateX(-50%);
   width: 1050px;
   height: 30px;
@@ -60,7 +69,7 @@ body {
   background-image: linear-gradient(#152224 90%, #020A14);
   position: fixed;
   bottom: 0;
-  left: 50%;
+  margin: center;
   transform: translateX(-50%);
   width: 1050px;
   height: 250px;
@@ -207,4 +216,10 @@ button {
 }
 .displayNone{
   display: none;
+}
+#dontDeleteThisDiv{
+  display: none;
+}
+.decisionButtons{
+  cursor:pointer;
 }
