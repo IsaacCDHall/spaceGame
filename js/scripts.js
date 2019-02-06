@@ -13,6 +13,7 @@ function Captain(name,funds,reputation,food,fuel){
   // this.timeLine=0;
 }
 
+
 Captain.prototype.recMod=function(food,funds,reputation,fuel){
   this.food+=food;
   this.funds+=funds;
@@ -42,7 +43,7 @@ $(document).ready(function(){
     $('#foodValue').text(newCaptain.food +",000");
     $('#reputationValue').text(newCaptain.reputation + "%");
     $('form, .username').hide();
-    $('#routeQuestion').slideDown(4000);
+    $('#routeQuestion').slideDown(2500);
     $('#established,#uncharted, #displayPanel, #dontDeleteThisDiv').show();
     $('#displayPanel').addClass('animated slideInDown');
     $('#controlPanel').addClass('animated slideInUp');
@@ -72,7 +73,7 @@ $(document).ready(function(){
   $('#established').click(function(){
     $("body").css({"background-image": "url(img/party.png)"})
     $('#routeQuestion,#established,#uncharted').hide();
-    $('#partyQuestion').slideDown(4000);
+    $('#partyQuestion').slideDown(2500);
     $('#partyYes,#partyNo').show();
     newCaptain.recMod(-30,0,0,-10);
   });
@@ -81,7 +82,7 @@ $(document).ready(function(){
   $('#uncharted').click(function(){
     $("body").css({"background-image": "url(img/uncharted.png)"})
     $('#routeQuestion,#established,#uncharted').hide();
-    $('#shipwreckQuestion').slideDown(4000);
+    $('#shipwreckQuestion').slideDown(2500);
     $('#shipInvestigate,#shipIgnore').show();
     newCaptain.recMod(-30,0,0,-10);
   });
@@ -89,7 +90,7 @@ $(document).ready(function(){
   $('#shipInvestigate').click(function(){
     $("body").css({"background-image": "url(img/wreck.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
-    $('#alienQuestion').slideDown(4000);
+    $('#alienQuestion').slideDown(2500);
     $('#screen').prepend('<p class="animated fadeOut">Your crew seems cautious</p>');
     $('#rescueAlien,#ignoreAlien').show();
     newCaptain.recMod(-30,0,-40,-10);
@@ -100,7 +101,7 @@ $(document).ready(function(){
     $("body").css({"background-image": "url(img/wreckinvestigate.png)"})
     $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
     $('#screen').prepend('<p class="animated fadeOut">Your dog seems happier with you </p>');
-    $('#motherShipQuestion').slideDown(4000);
+    $('#motherShipQuestion').slideDown(2500);
     $('#fleeShip,#returnAlien').show();
     newCaptain.recMod(0,0,+50,0);
   });
@@ -115,7 +116,7 @@ $(document).ready(function(){
   //when user lets alien board
   $('#returnAlien').click(function(){
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
-    $('#traderQuestion').slideDown(4000);
+    $('#traderQuestion').slideDown(2500);
     $('#traderYes,#traderNo').show();
     newCaptain.recMod(0,0,0,0);
   });
@@ -123,7 +124,7 @@ $(document).ready(function(){
   $('#ignoreAlien').click(function(){
     $("body").css({"background-image": "url(img/trader.png)"})
     $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
-    $('#traderQuestion').slideDown(4000);
+    $('#traderQuestion').slideDown(2500);
     // lose fuel
     $('#traderYes,#traderNo').show();
     newCaptain.recMod(0,0,-20,0);
@@ -132,55 +133,61 @@ $(document).ready(function(){
   $('#shipIgnore').click(function(){
     $("body").css({"background-image": "url(img/trader.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
-    $('#upsetCrew').slideDown(4000);
+    $('#upsetCrew').slideDown(2500);
     $('#beRude,#beNice').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(0,0,-40,0);
   });
+  //rude response to crew
   $('#beRude').click(function(){
     $('#upsetCrew,#beRude,#beNice').hide();
-    $('#crewDisobey').slideDown(4000);
+    $('#crewDisobey').slideDown(2500);
     $('#leaveCrew,#helpCrewRude').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(0,0,-30,0);
   });
+  //nice response to crew
   $('#beNice').click(function(){
     $('#upsetCrew,#beRude,#beNice').hide();
-    $('#crewDisobey').slideDown(4000);
+    $('#crewDisobey').slideDown(2500);
     $('#leaveCrew,#helpCrewNice').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(0,0,+10,0);
   });
+  //leave crew behind if they leave to help shipwreck
   $('#leaveCrew').click(function(){
     $('#crewDisobey,#leaveCrew,#helpCrewRude,#helpCrewNice').hide();
-    $('#traderQuestion').slideDown(4000);
+    $('#traderQuestion').slideDown(2500);
     $('#screen').prepend('<p class="animated fadeOut">Tension dissipates as you fly past the wreck</p>');
     $('#traderYes,#traderNo').show();
-
-    newCaptain.recMod(-30,0,20,-10);
+    newCaptain.recMod(10,10,-30,-10);
   });
-
+//go back to help crew after rude response
   $('#helpCrewRude').click(function(){
     $('#crewDisobey,#leaveCrew,#helpCrewRude').hide();
-    $('#emptyShipwreck').slideDown(4000);
-    $('#takeFunds,#takeFood').show();
-    newCaptain.recMod(0,0,0,0);
+    $('#emptyShipwreck').slideDown(2500);
+    $('#takeFuel,#takeFood').show();
+    newCaptain.recMod(-10,0,0,-10);
   });
-  $('#takeFunds').click(function(){
-    $('#emptyShipwreck,#takeFood,#takeFunds').hide();
-    $('#traderQuestion').slideDown(4000);
+  //take fuel
+  $('#takeFuel').click(function(){
+    $('#emptyShipwreck,#takeFood,#takeFuel').hide();
+    $('#traderQuestion').slideDown(2500);
     $('#traderNo,#traderYes').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(0,0,0,50);
   });
+  //take food
   $('#takeFood').click(function(){
-    $('#emptyShipwreck,#takeFood,#takeFunds').hide();
-    $('#traderQuestion').slideDown(4000);
+    $('#emptyShipwreck,#takeFood,#takeFuel').hide();
+    $('#traderQuestion').slideDown(2500);
     $('#traderNo,#traderYes').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(30,0,0,0);
   });
+  //go back to help crew after nice response
   $('#helpCrewNice').click(function(){
     $('#crewDisobey,#leaveCrew,#helpCrewNice').hide();
-    $('#shipwreckTrap').slideDown(4000);
+    $('#shipwreckTrap').slideDown(2500);
     $('#bargainTrap,#runTrap').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(-10,0,20,-10);
   });
+  //after go back nice response
   $('#bargainTrap').click(function(){
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
     $('#dead').show();
@@ -193,7 +200,6 @@ $(document).ready(function(){
   });
 
 //when user decides to trade with the shady dude
-
   $('#traderYes').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#traderQuestion,#traderYes,#traderNo').hide();
@@ -211,7 +217,7 @@ $(document).ready(function(){
   $('#partyYes').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitparty.png)"})
     $('#partyQuestion,#partyYes,#partyNo').hide();
-    $('#QuantityParty').slideDown(4000);
+    $('#QuantityParty').slideDown(2500);
     $('#getWasted,#responsible').show();
     newCaptain.recMod(-10,-10,10,0);
   });
@@ -232,21 +238,21 @@ $(document).ready(function(){
   $('#responsible').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpit.png)"})
     $('#QuantityParty,#getWasted,#responsible').hide();
-    $('#toastQuestion').slideDown(4000);
+    $('#toastQuestion').slideDown(2500);
     $('#eatToast,#noToast').show();
     newCaptain.recMod(0,0,+20,0);
   });
   // when user eats the toast
   $('#eatToast').click(function(){
     $('#toastQuestion,#eatToast,#noToast').hide();
-    $('#autoPilot').slideDown(4000);
+    $('#autoPilot').slideDown(2500);
     $('#yesAuto,#noAuto').show();
     newCaptain.recMod(0,0,0,0);
   });
   // when user decides he's too good for toast
   $('#noToast').click(function(){
     $('#toastQuestion,#eatToast,#noToast').hide();
-    $('#autoPilot').slideDown(4000);
+    $('#autoPilot').slideDown(2500);
     $('#yesAuto,#noAuto').show();
     newCaptain.recMod(-30,0,0,-10);
   });
@@ -255,13 +261,24 @@ $(document).ready(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $("body").css({"background-image": "url(img/asteroids.png)"})
     $('#autoPilot,#yesAuto,#noAuto').hide();
+    $('#asteroidDeath').slideDown(2500);
+    $('#findSolution,#sleepAgain').show();
+    newCaptain.recMod(0,0,0,-30);
+  });
+  $('#sleepAgain').click(function(){
+    $('#asteroidDeath,#findSolution,#sleepAgain').hide();
+    $('#dead').show();
+    newCaptain.recMod(0,0,0,-30);
+  });
+  $('#findSolution').click(function(){
+    $('#asteroidDeath,#findSolution,#sleepAgain').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,-30);
   });
   // user decides against autopilot
   $('#noAuto').click(function(){
     $('#autoPilot,#yesAuto,#noAuto').hide();
-    $('#AI').slideDown(4000);
+    $('#AI').slideDown(2500);
     $('#repairAI,#noRepairAI').show();
     newCaptain.recMod(-20,0,0,-10);
   });

@@ -27,7 +27,7 @@
               <div class="username">
                 <h3>Login:</h3>
                 <form id="nameForm" action="index.html" method="post">
-                  <input id="nameInput" type="text" placeholder=" Enter your name">
+                  <input id="nameInput" type="text" placeholder=" Enter your Name" required>
                   <button id="nameSubmitButton" type="submit"> submit</button>
                 </form>
               </div>
@@ -81,6 +81,9 @@
                 </div>
                 <div class="displayNone" id="autoPilot">
                   <p>AI: <span class ='nameInput'></span>, there is a low probability of future collisions. Would you like to engage auto-pilot and cryo-sleep through the remaining voyage?</p>
+                </div>
+                <div class="displayNone" id="asteroidDeath">
+                  <p>We drifted into an asteroid field while everyone was asleep and our ship is beyond repairs</p>
                 </div>
                 <div class="displayNone" id="AI">
                   <p>AI: An anomaly has been detected in my Empathy Module. While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
@@ -145,9 +148,10 @@
             <button class="decisionButtons decisionRight" id="helpCrewNice" type="button">Go back and help him investigate</button>
             <button class="decisionButtons decisionLeft" id="bargainTrap" type="button">Try to make a deal so the aliens dont kill you</button>
             <button class="decisionButtons decisionRight" id="runTrap" type="button">Try to outrun the aliens</button>
-            <button class="decisionButtons decisionLeft" id="takeFunds" type="button">Grab all the money you can carry</button>
+            <button class="decisionButtons decisionLeft" id="takeFuel" type="button">Grab all the fuel you can carry</button>
             <button class="decisionButtons decisionRight" id="takeFood" type="button">Its going to be a long journey, grab all the food you can find</button>
-
+            <button class="decisionButtons decisionLeft" id="findSolution" type="button">look for ways to repair the ship</button>
+            <button class="decisionButtons decisionRight" id="sleepAgain" type="button">Accept your fate and go back to sleep</button>
 
 
             <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
