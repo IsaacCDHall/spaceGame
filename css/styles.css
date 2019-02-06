@@ -1,11 +1,11 @@
 
 .slideInUp{
-  animation-delay: 4s;
-  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-duration: 2.5s;
 }
 .slideInDown{
-  animation-duration: 3s;
-  animation-delay:4.5s;
+  animation-duration: 2.5s;
+  animation-delay:3.5s;
 }
 body {
   background-image: url(../img/start.png);
@@ -230,4 +230,7 @@ button {
 }
 .decisionButtons{
   cursor:pointer;
+}
+.fadeOut{
+  animation-duration: 7s;
 }
