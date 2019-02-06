@@ -131,7 +131,6 @@ $(document).ready(function(){
   });
   //when user doesnt investigate shipwreck
   $('#shipIgnore').click(function(){
-    $("body").css({"background-image": "url(img/trader.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
     $('#upsetCrew').slideDown(2500);
     $('#beRude,#beNice').show();
@@ -168,6 +167,7 @@ $(document).ready(function(){
   });
   //take fuel
   $('#takeFuel').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#emptyShipwreck,#takeFood,#takeFuel').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderNo,#traderYes').show();
@@ -175,6 +175,7 @@ $(document).ready(function(){
   });
   //take food
   $('#takeFood').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#emptyShipwreck,#takeFood,#takeFuel').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderNo,#traderYes').show();
@@ -208,10 +209,23 @@ $(document).ready(function(){
   });
   //when decides not to trade with shady dude
   $('#traderNo').click(function(){
-    $("body").css({"background-image": "url(img/home.png)"})
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#traderQuestion,#traderYes,#traderNo').hide();
-    $('#mars').show();
+    $('#hostileTrader').slideDown(2500);
+    $('#giveResources,#stopTrader').show();
     newCaptain.recMod(-30,0,0,-10);
+  });
+  $('#giveResources').click(function(){
+    $("body").css({"background-image": "url(img/home.png)"})
+    $('#hostileTrader,#giveResources,#stopTrader').hide();
+    $('#mars').show();
+    newCaptain.recMod(-10,0,20,-10);
+  });
+  $('#stopTrader').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
+    $('#hostileTrader,#giveResources,#stopTrader').hide();
+    $('#dead').show();
+    newCaptain.recMod(-10,0,20,-10);
   });
   //when user decides to party
   $('#partyYes').click(function(){
