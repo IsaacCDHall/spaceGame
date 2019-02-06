@@ -26,7 +26,6 @@ Captain.prototype.recMod=function(food,funds,reputation,population){
 $(document).ready(function(){
   var newCaptain;
   $("#nameForm").submit(function(event){
-
     var nameInput= $("#nameInput").val();
     newCaptain = new Captain(nameInput, 100, 100, 100, 100);
     $('.nameInput').text(nameInput);
@@ -35,7 +34,9 @@ $(document).ready(function(){
     $('#reputationValue').text(newCaptain.reputation + "%");
     $('form, .username').hide();
     $('#routeQuestion').slideDown(4000);
-    $('#established,#uncharted').show();
+    $('#established,#uncharted, #displayPanel, #dontDeleteThisDiv').show();
+    $('#displayPanel').addClass('animated slideInDown');
+    $('#controlPanel').addClass('animated slideInUp');
     console.log(newCaptain.name);
 
     event.preventDefault();
