@@ -1,3 +1,6 @@
+// Can navigate to new page for gameOver Screens using JS
+
+// window.location.replace('url')
 
 function Captain(name,funds,reputation,food,fuel){
   this.name=name;
@@ -18,9 +21,6 @@ Captain.prototype.recMod=function(food,funds,reputation,population){
   // this.population+=population;
   console.log(this);
 }
-
-// var newCaptain= new Captain("Crunch","Berzerker","easy",10000,10000,10000);
-
 
 
 $(document).ready(function(){
