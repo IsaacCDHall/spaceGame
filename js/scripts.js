@@ -48,11 +48,15 @@ $(document).ready(function(){
     $('#foodValue').text(newCaptain.food +",000");
     $('#reputationValue').text(newCaptain.reputation + "%");
     $('#fuelz').removeClass();
-    if(newCaptain.fuel>100){
+    if(newCaptain.fuel>=100){
       newCaptain.fuel=100;
-      $('#fuelz').addClass("c100 p100 blue");
-    } else {
+      $('#fuelz').addClass("c100 p100 green");
+    } else if(newCaptain.fuel>80){
+        $('#fuelz').addClass('c100 p'+ newCaptain.fuel + " blue");
+    }else if (newCaptain.fuel>50) {
       $('#fuelz').addClass('c100 p'+ newCaptain.fuel + " orange");
+    } else if (newCaptain.fuel<=50){
+      $('#fuelz').addClass('c100 p'+ newCaptain.fuel + " red");
     }
   });
 
@@ -199,12 +203,12 @@ $(document).ready(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
     // plot death
-    window.location.replace('gameOver/traderDeath.html')
+    window.location.replace('gameOver/alienAttack.html')
   });
   $('#runTrap').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
-    window.location.replace('gameOver/traderDeath.html')
+    window.location.replace('gameOver/alienAttack.html')
     // plot death
   });
 
@@ -311,7 +315,7 @@ $(document).ready(function(){
       $('#asteroidEscape,#dropFood,#extraFuel').hide();
       $('#AI').slideDown(2500);
       $('#repairAI,#noRepairAI').show();
-      newCaptain.recMod(-50,0,0,0);
+      newCaptain.recMod(-40,0,0,0);
     });
     //lose fuel to escape
     $('#extraFuel').click(function(){
@@ -364,16 +368,15 @@ $(document).ready(function(){
     // victory
 
     newCaptain.recMod(0,0,-50,-20);
-    window.location.replace('gameOver/victory.html')
+    window.location.replace('gameOver/victory.html');
   });
   $('#wasAfraid').click(function(){
     $('#wasAfraid,#betrayCrew_2,#wasAfraid').hide();
     // victory
     newCaptain.recMod(0,0,-30,0);
-    window.location.replace('gameOver/victory.html')
+    window.location.replace('gameOver/victory.html');
   });
   $('#selfDestruct').click(function(){
-    window.location.replace('gameOver/selfDestruct.html')
-
+    window.location.replace('gameOver/selfDestruct.html');
   });
 });
