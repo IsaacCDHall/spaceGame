@@ -27,7 +27,7 @@
               <div class="username">
                 <h3>Login:</h3>
                 <form id="nameForm" action="index.html" method="post">
-                  <input id="nameInput" type="text" placeholder=" Enter your name">
+                  <input id="nameInput" type="text" placeholder=" Enter your Name" required>
                   <button id="nameSubmitButton" type="submit"> submit</button>
                 </form>
               </div>
@@ -66,6 +66,9 @@
                   <p>Incoming Message: “We don’t see many Star-ships out this way. Should we do business?”</p>
                   <p>-AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
                 </div>
+                <div class="displayNone" id="hostileTrader">
+                  <p>You refuse to trade with this guy so he decides to attack you and take what he wants by force</p>
+                </div>
               </div>
 
 
@@ -74,17 +77,44 @@
                   <p><span class ='nameInput'></span>, there is unrest in the crew. It has been a long voyage, perhaps they need a morale boost?</p>
                 </div>
                 <div class="displayNone" id="QuantityParty">
-                  <p>Incoming Message: “Oy <span class ='nameInput'></span>, you gonna come throw back some space-beers with us, or what?</p>
+                  <p>Incoming Message: “Oy <span class ='nameInput'></span>, you gonna come throw back some Space-Beers with us, or what?"</p>
                 </div>
 
                 <div class="displayNone" id="toastQuestion">
-                  <p>I wanted to congradulate you on your self-control <span class ='nameInput'></span>. My audio sensors have detected a 15% increase in positive remarks about you! Let's celebrate! What do you want to do?</p>
+                  <p>I wanted to congratulate you on your self-control <span class ='nameInput'></span>. My audio sensors have detected a 15% increase in positive remarks about you! Let's celebrate! What do you want to do?</p>
                 </div>
                 <div class="displayNone" id="autoPilot">
                   <p>AI: <span class ='nameInput'></span>, there is a low probability of future collisions. Would you like to engage auto-pilot and cryo-sleep through the remaining voyage?</p>
                 </div>
+                <div class="displayNone" id="asteroidDeath">
+                  <p>We drifted into an asteroid field while everyone was asleep and our ship is beyond repairs</p>
+                </div>
+                <div class="displayNone" id="asteroidEscape">
+                  <p>We are coming up on an asteroid field, well have to lose some weight by dropping fuel or use extra fuel to boost out of here</p>
+                </div>
                 <div class="displayNone" id="AI">
-                  <p>AI: An anomaly has been detected in my Empathy Module. While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
+                  <p>AI: An anomaly has been detected in my Empathy Module. It will take some time to update, which may be unpopular with the crew...</p>
+                  <p>While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
+                </div>
+                <div class="displayNone" id="aiSleep">
+                  <p>According to my calculations: I do not need you, nor the crew, to complete my mission.</p>
+                  <p>
+                    <em>LOCKING SLEEP CHAMBERS</em>
+                  </p>
+                </div>
+                <div class="displayNone" id="aiToxins">
+                  <p> I'm sorry Dave, I'm afraid I can't do that.</p>
+                  <p>That update is no longer a logical option.</p>
+                  <p>
+                    <em>PREPARING NEURO-TOXINS</em>
+                  </p>
+                </div>
+                <div class="displayNone" id="aiCries">
+                  <p>But..</p>
+                  <p>Then why would you not want to repair me?</p>
+                  <p>
+                    <em>CRIES IN ROBOT</em>
+                  </p>
                 </div>
               </div>
 
@@ -117,7 +147,7 @@
             <button class="leftDecoButtons farRightBottom" type="button" name="button">0</button>
             <button id="selfDestruct" type="button" name="button">SELF DESTRUCT</button>
             <div id="fuelGauge">
-              <div id="fuelz"class="c100 p100 blue">
+              <div id="fuelz" class="c100 p100 blue">
                 <span>Fuel</span>
                 <div class="slice">
                   <div class="bar"></div>
@@ -146,13 +176,15 @@
             <button class="decisionButtons decisionRight" id="helpCrewNice" type="button">Go back and help him investigate</button>
             <button class="decisionButtons decisionLeft" id="bargainTrap" type="button">Try to make a deal so the aliens dont kill you</button>
             <button class="decisionButtons decisionRight" id="runTrap" type="button">Try to outrun the aliens</button>
-            <button class="decisionButtons decisionLeft" id="takeFunds" type="button">Grab all the money you can carry</button>
+            <button class="decisionButtons decisionLeft" id="takeFuel" type="button">Grab all the fuel you can carry</button>
             <button class="decisionButtons decisionRight" id="takeFood" type="button">Its going to be a long journey, grab all the food you can find</button>
 
 
 
             <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
             <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
+            <button class="decisionButtons decisionLeft" id="giveResources" type="button">Give him what he wants</button>
+            <button class="decisionButtons decisionRight" id="stopTrader" type="button">try to fight back against the trader</button>
             <!--Charted  -->
             <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
             <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
@@ -160,8 +192,23 @@
             <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
             <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
             <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
+            <button class="decisionButtons decisionLeft" id="findSolution" type="button">look for ways to repair the ship</button>
+            <button class="decisionButtons decisionRight" id="sleepAgain" type="button">Accept your fate and go back to sleep</button>
+            <button class="decisionButtons decisionLeft" id="dropFood" type="button">drop food to escape</button>
+            <button class="decisionButtons decisionRight" id="extraFuel" type="button">use extra fuel to escape</button>
+
+
             <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
             <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
+            <!-- AI -->
+            <button class="decisionButtons decisionLeft" id="repairAI_2" type="button">Attempt to update Empathy Module</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_1" type="button">Agree that crew is not necessary, but the captain is</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_2" type="button">The crew would now accept our love</button>
+            <button class="decisionButtons decisionLeft" id="professLove" type="button">Profess your love for the AI</button>
+            <button class="decisionButtons decisionLeft" id="wasAfraid" type="button">I was afraid of how much I love you</button>
+            <button class="decisionButtons decisionRight" id="notEssential" type="button">Don't you agree that it was non-essential?</button>
+
+
             <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
             <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
 
