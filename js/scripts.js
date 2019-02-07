@@ -114,6 +114,7 @@ $(document).ready(function(){
   });
   //when user lets alien board
   $('#returnAlien').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
     $('#traderQuestion').slideDown(4000);
     $('#traderYes,#traderNo').show();
@@ -130,7 +131,6 @@ $(document).ready(function(){
   });
   //when user doesnt investigate shipwreck
   $('#shipIgnore').click(function(){
-    $("body").css({"background-image": "url(img/trader.png)"})
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
     $('#upsetCrew').slideDown(4000);
     $('#beRude,#beNice').show();
@@ -149,6 +149,7 @@ $(document).ready(function(){
     newCaptain.recMod(0,0,0,0);
   });
   $('#leaveCrew').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#crewDisobey,#leaveCrew,#helpCrewRude,#helpCrewNice').hide();
     $('#traderQuestion').slideDown(4000);
     $('#screen').prepend('<p class="animated fadeOut">Tension dissipates as you fly past the wreck</p>');
@@ -158,35 +159,41 @@ $(document).ready(function(){
   });
 
   $('#helpCrewRude').click(function(){
+    $("body").css({"background-image": "url(img/wreck.png)"})
     $('#crewDisobey,#leaveCrew,#helpCrewRude').hide();
     $('#emptyShipwreck').slideDown(4000);
     $('#takeFunds,#takeFood').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#takeFunds').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#emptyShipwreck,#takeFood,#takeFunds').hide();
     $('#traderQuestion').slideDown(4000);
     $('#traderNo,#traderYes').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#takeFood').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#emptyShipwreck,#takeFood,#takeFunds').hide();
     $('#traderQuestion').slideDown(4000);
     $('#traderNo,#traderYes').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#helpCrewNice').click(function(){
+    $("body").css({"background-image": "url(img/wreckinvestigate.png)"})
     $('#crewDisobey,#leaveCrew,#helpCrewNice').hide();
     $('#shipwreckTrap').slideDown(4000);
     $('#bargainTrap,#runTrap').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#bargainTrap').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#runTrap').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
