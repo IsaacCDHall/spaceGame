@@ -1,0 +1,42 @@
+body {
+  background-image: url(../img/home.png);
+  background-size: cover;
+  background-position: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+}
+h1 {
+  font-size: 100px;
+}
+.title {
+  background-image: url(../img/logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+.backStory {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 25px;
+  font-size: 25px;
+}
+#startGame {
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+  color: white
+}
+#startGame:hover {
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+  color: white;
+}

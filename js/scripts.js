@@ -115,6 +115,7 @@ $(document).ready(function(){
   });
   //when user lets alien board
   $('#returnAlien').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderYes,#traderNo').show();
@@ -152,6 +153,7 @@ $(document).ready(function(){
   });
   //leave crew behind if they leave to help shipwreck
   $('#leaveCrew').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
     $('#crewDisobey,#leaveCrew,#helpCrewRude,#helpCrewNice').hide();
     $('#traderQuestion').slideDown(2500);
     $('#screen').prepend('<p class="animated fadeOut">Tension dissipates as you fly past the wreck</p>');
@@ -160,6 +162,7 @@ $(document).ready(function(){
   });
 //go back to help crew after rude response
   $('#helpCrewRude').click(function(){
+    $("body").css({"background-image": "url(img/wreck.png)"})
     $('#crewDisobey,#leaveCrew,#helpCrewRude').hide();
     $('#emptyShipwreck').slideDown(2500);
     $('#takeFuel,#takeFood').show();
@@ -183,6 +186,7 @@ $(document).ready(function(){
   });
   //go back to help crew after nice response
   $('#helpCrewNice').click(function(){
+    $("body").css({"background-image": "url(img/wreckinvestigate.png)"})
     $('#crewDisobey,#leaveCrew,#helpCrewNice').hide();
     $('#shipwreckTrap').slideDown(2500);
     $('#bargainTrap,#runTrap').show();
@@ -190,11 +194,13 @@ $(document).ready(function(){
   });
   //after go back nice response
   $('#bargainTrap').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);
   });
   $('#runTrap').click(function(){
+    $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
     $('#dead').show();
     newCaptain.recMod(0,0,0,0);

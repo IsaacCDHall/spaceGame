@@ -30,6 +30,7 @@ body {
   color: lime;
   text-shadow: 0px 0px 4px rgba(0, 255, 0, 0.75);
 }
+
 .cockpit {
   background-image: url(../img/cockpit.png);
   background-size: cover;
