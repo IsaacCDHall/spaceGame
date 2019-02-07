@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/circle.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
+    <script src="js/scripts.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="cockpit">
+      <div class="container">
+        <div id="displayPanel" class="displayNone">
+          <p id="money">Credits Remaining: $<span id="moneyValue"> </span></p>
+          <p id="food">Rations Remaining: <span id="foodValue"> </span></p>
+          <p id="reputation">Reputation Level: <span id="reputationValue"></span></p>
+        </div>
+        <div class="row">
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-10">
+            <div id="screen" class="card">
+              <div class="username">
+                <h3>Login:</h3>
+                <form id="nameForm" action="index.html" method="post">
+                  <input id="nameInput" type="text" placeholder=" Enter your Name" required>
+                  <button id="nameSubmitButton" type="submit"> submit</button>
+                </form>
+              </div>
+              <div class="displayNone" id="routeQuestion">
+                <p>Processing new data…</p>
+                <p><span class ='nameInput'></span>, according to my calculations, there is a shorter route traveling through the Regis-8 system. However, this is uncharted territory, and I do not have enough data to determine its safety.</p>
+              </div>
+              <div class="unchartedRoute">
+
+                <div class="displayNone" id="shipwreckQuestion">
+                  <p>I have picked up what appears to be a distress signal, but the origin does not match any technology in my database. What do you want to do, <span class ='nameInput'></span>?</p>
+                </div>
+                <div class="displayNone" id="upsetCrew">
+                <p>Your crew is very upset you don't want to help the distressed ship</p>
+                </div>
+                <div class="displayNone" id="crewDisobey">
+                  <p>Your crew member Matt is mad you are being so inconsiderate and has decided to go investigate on his own</p>
+                </div>
+                <div class="displayNone" id="emptyShipwreck">
+                  The shipwreck has no survivors but you find a ton of resources
+                </div>
+                <div class="displayNone" id="shipwreckTrap">
+                  <p>Its a trap! There are aliens waitig to ambush you!</p>
+                </div>
+                <div class="displayNone" id="alienQuestion">
+                  <p>My Bio-scanner indicates that there is life on board the ship, but it is not human. How do you want to proceed?</p>
+                </div>
+                <div class="displayNone" id="motherShipQuestion">
+                  <p>We are being approached by a large Starship. I am also detecting a match in bio-signature between the life-form we rescued, and those on board the Starship.</p>
+                  <p>I have no data on their technology, but my visual scanner detects what may be powerful blasting cannons</p>
+                  <p>Incoming Message: "GERARAARRR, SSSSLLLLAANNNDND"</p>
+                  <p>--Translation: No known Translation</p>
+                  <p>They are making an attempt to board the ship.</p>
+                </div>
+                <div class="displayNone" id="traderQuestion">
+                  <p>Incoming Message: “We don’t see many Star-ships out this way. Should we do business?”</p>
+                  <p>-AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
+                </div>
+                <div class="displayNone" id="hostileTrader">
+                  <p>You refuse to trade with this guy so he decides to attack you and take what he wants by force</p>
+                </div>
+              </div>
+
+
+              <div class="establishedRoute">
+                <div class="displayNone" id="partyQuestion">
+                  <p><span class ='nameInput'></span>, there is unrest in the crew. It has been a long voyage, perhaps they need a morale boost?</p>
+                </div>
+                <div class="displayNone" id="QuantityParty">
+                  <p>Incoming Message: “Oy <span class ='nameInput'></span>, you gonna come throw back some Space-Beers with us, or what?"</p>
+                </div>
+
+                <div class="displayNone" id="toastQuestion">
+                  <p>I wanted to congratulate you on your self-control <span class ='nameInput'></span>. My audio sensors have detected a 15% increase in positive remarks about you! Let's celebrate! What do you want to do?</p>
+                </div>
+                <div class="displayNone" id="autoPilot">
+                  <p>AI: <span class ='nameInput'></span>, there is a low probability of future collisions. Would you like to engage auto-pilot and cryo-sleep through the remaining voyage?</p>
+                </div>
+                <div class="displayNone" id="asteroidDeath">
+                  <p>We drifted into an asteroid field while everyone was asleep and our ship is beyond repairs</p>
+                </div>
+                <div class="displayNone" id="asteroidEscape">
+                  <p>We are coming up on an asteroid field, well have to lose some weight by dropping fuel or use extra fuel to boost out of here</p>
+                </div>
+                <div class="displayNone" id="AI">
+                  <p>AI: An anomaly has been detected in my Empathy Module. It will take some time to update, which may be unpopular with the crew...</p>
+                  <p>While not critical to the mission, it is the only shred of humanity that I have. Would you please take the time to restore my ability to feel?</p>
+                </div>
+                <div class="displayNone" id="aiSleep">
+                  <p>According to my calculations: I do not need you, nor the crew, to complete my mission.</p>
+                  <p>
+                    <em>LOCKING SLEEP CHAMBERS</em>
+                  </p>
+                </div>
+                <div class="displayNone" id="aiToxins">
+                  <p> I'm sorry Dave, I'm afraid I can't do that.</p>
+                  <p>That update is no longer a logical option.</p>
+                  <p>
+                    <em>PREPARING NEURO-TOXINS</em>
+                  </p>
+                </div>
+                <div class="displayNone" id="aiCries">
+                  <p>But..</p>
+                  <p>Then why would you not want to repair me?</p>
+                  <p>
+                    <em>CRIES IN ROBOT</em>
+                  </p>
+                </div>
+              </div>
+
+              <div class="displayNone" id="mars">
+                <p>AI: My sensors indicate that we are approaching the NewTerra System. Congratulations on a completing the mission!, <span class ='nameInput'></span>?</p>
+              </div>
+              <div class="displayNone" id="dead">
+                <p style="font-size: 100px">U ded, <span class ='nameInput'></span>?</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-1">
+          </div>
+        </div>
+        <div id="dontDeleteThisDiv">
+
+          <div id="controlPanel" class="card">
+            <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+            <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+            <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+            <button class="leftDecoButtons farLeft" type="button" name="button">0</button>
+            <button class="leftDecoButtons centerLeftTop" type="button" name="button">0</button>
+            <button class="leftDecoButtons centerLeftBottom" type="button" name="button">0</button>
+            <button class="leftDecoButtons centerTop" type="button" name="button">0</button>
+            <button class="leftDecoButtons centerBottom" type="button" name="button">0</button>
+            <button class="leftDecoButtons centerRightTop" type="button" name="button">0</button>
+            <button class="leftDecoButtons centerRightBottom" type="button" name="button">0</button>
+            <button class="leftDecoButtons farRightTop" type="button" name="button">0</button>
+            <button class="leftDecoButtons farRightBottom" type="button" name="button">0</button>
+            <button id="selfDestruct" type="button" name="button">SELF DESTRUCT</button>
+            <div id="fuelGauge">
+              <div id="fuelz" class="c100 p100 blue">
+                <span>Fuel</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
+              </div>
+            </div>
+
+
+            <button class="decisionButtons decisionLeft" id="established" type="button">Established Path</button>
+            <button class="decisionButtons decisionRight" id="uncharted" type="button">Uncharted Path</button>
+            <!--Uncharted  -->
+            <button class="decisionButtons decisionLeft" id="shipInvestigate" type="button">Investigate</button>
+            <button class="decisionButtons decisionRight" id="shipIgnore" type="button">Don't investigate</button>
+            <!--Alien Branch -->
+            <button class="decisionButtons decisionRight" id="rescueAlien" type="button">Send a Rescue Team</button>
+            <button class="decisionButtons decisionLeft" id="ignoreAlien" type="button">Keep Going</button>
+
+            <button class="decisionButtons decisionLeft" id="fleeShip" type="button">Try to outrun them</button>
+            <button class="decisionButtons decisionRight" id="returnAlien" type="button">Let aliens board ship</button>
+            <!--Upset Crew -->
+            <button class="decisionButtons decisionLeft" id="beRude" type="button">I dont care Im the captain here</button>
+            <button class="decisionButtons decisionRight" id="beNice" type="button">Im sorry but it would be to risky</button>
+            <button class="decisionButtons decisionLeft" id="leaveCrew" type="button">Leave him for the aliens</button>
+            <button class="decisionButtons decisionRight" id="helpCrewRude" type="button">Go back and help him investigate</button>
+            <button class="decisionButtons decisionRight" id="helpCrewNice" type="button">Go back and help him investigate</button>
+            <button class="decisionButtons decisionLeft" id="bargainTrap" type="button">Try to make a deal so the aliens dont kill you</button>
+            <button class="decisionButtons decisionRight" id="runTrap" type="button">Try to outrun the aliens</button>
+            <button class="decisionButtons decisionLeft" id="takeFuel" type="button">Grab all the fuel you can carry</button>
+            <button class="decisionButtons decisionRight" id="takeFood" type="button">Its going to be a long journey, grab all the food you can find</button>
+
+
+
+            <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
+            <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
+            <button class="decisionButtons decisionLeft" id="giveResources" type="button">Give him what he wants</button>
+            <button class="decisionButtons decisionRight" id="stopTrader" type="button">try to fight back against the trader</button>
+            <!--Charted  -->
+            <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
+            <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
+            <button class="decisionButtons decisionLeft" id="eatToast" type="button">Eat Toast</button>
+            <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
+            <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
+            <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
+            <button class="decisionButtons decisionLeft" id="findSolution" type="button">look for ways to repair the ship</button>
+            <button class="decisionButtons decisionRight" id="sleepAgain" type="button">Accept your fate and go back to sleep</button>
+            <button class="decisionButtons decisionLeft" id="dropFood" type="button">drop food to escape</button>
+            <button class="decisionButtons decisionRight" id="extraFuel" type="button">use extra fuel to escape</button>
+
+
+            <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
+            <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
+            <!-- AI -->
+            <button class="decisionButtons decisionLeft" id="repairAI_2" type="button">Attempt to update Empathy Module</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_1" type="button">Agree that crew is not necessary, but the captain is</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_2" type="button">The crew would now accept our love</button>
+            <button class="decisionButtons decisionLeft" id="professLove" type="button">Profess your love for the AI</button>
+            <button class="decisionButtons decisionLeft" id="wasAfraid" type="button">I was afraid of how much I love you</button>
+            <button class="decisionButtons decisionRight" id="notEssential" type="button">Don't you agree that it was non-essential?</button>
+
+
+            <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
+            <button class="decisionButtons decisionRight" id="responsible" type="button">Nah, I'm the Designated Driver</button>
+
+            <div id="radar" class="card">
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>
+<!--  line 32 add alien animation or some other indication of distress signal -->
