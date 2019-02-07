@@ -1,16 +1,9 @@
-// Can navigate to new page for gameOver Screens using JS
-
-
 function Captain(name,funds,reputation,food,fuel){
   this.name=name;
   this.funds=funds;
   this.reputation=reputation;
   this.food=food;
   this.fuel=fuel;
-  // this.story=story;
-  // this.difficulty=difficulty;
-  // this.population=100;
-  // this.timeLine=0;
 }
 
 
@@ -48,17 +41,6 @@ $(document).ready(function(){
     $('#displayPanel').addClass('animated slideInDown');
     $('#controlPanel').addClass('animated slideInUp');
     event.preventDefault();
-  // Are you ready? Yes button is same as submit below
-  // Should "No" answer take you to Game Over screen? Or reset form?
-    // var storyInput= $("#storyInput").val();
-    // var difficultyInput= $("#difficultyInput").val();
-    // if (difficultyInput==="easy"){
-    //   newCaptain= new Captain(nameInput,storyInput,difficultyInput,10000,10000,10000);
-    // } else if (difficultyInput==="medium"){
-    //   newCaptain= new Captain(nameInput,storyInput,difficultyInput,1000,1000,1000);
-    // } else if (difficultyInput==="hard"){
-    //   newCaptain= new Captain(nameInput,storyInput,difficultyInput,100,100,100);
-    // }
   });
   $('#controlPanel').click(function(){
     newCaptain.thresholds();
@@ -66,7 +48,12 @@ $(document).ready(function(){
     $('#foodValue').text(newCaptain.food +",000");
     $('#reputationValue').text(newCaptain.reputation + "%");
     $('#fuelz').removeClass();
-    $('#fuelz').addClass('c100 p'+ newCaptain.fuel + " orange");
+    if(newCaptain.fuel>100){
+      newCaptain.fuel=100;
+      $('#fuelz').addClass("c100 p100 blue");
+    } else {
+      $('#fuelz').addClass('c100 p'+ newCaptain.fuel + " orange");
+    }
   });
 
   //when user clicks on Established Path
@@ -75,7 +62,7 @@ $(document).ready(function(){
     $('#routeQuestion,#established,#uncharted').hide();
     $('#partyQuestion').slideDown(2500);
     $('#partyYes,#partyNo').show();
-    newCaptain.recMod(-30,0,0,-10);
+    newCaptain.recMod(-40,0,0,-10);
   });
 
   //when user clicks on uncharted Path
@@ -84,7 +71,7 @@ $(document).ready(function(){
     $('#routeQuestion,#established,#uncharted').hide();
     $('#shipwreckQuestion').slideDown(2500);
     $('#shipInvestigate,#shipIgnore').show();
-    newCaptain.recMod(-30,0,0,-10);
+    newCaptain.recMod(-40,0,0,-10);
   });
   //when user investigates shipwreck
   $('#shipInvestigate').click(function(){
@@ -93,7 +80,7 @@ $(document).ready(function(){
     $('#alienQuestion').slideDown(2500);
     $('#screen').prepend('<p class="animated fadeOut">Your crew seems cautious</p>');
     $('#rescueAlien,#ignoreAlien').show();
-    newCaptain.recMod(-30,0,-40,-10);
+    newCaptain.recMod(-20,0,-40,-20);
   });
 
   //when user chooses to send rescue team
@@ -103,23 +90,38 @@ $(document).ready(function(){
     $('#screen').prepend('<p class="animated fadeOut">Your dog seems happier with you </p>');
     $('#motherShipQuestion').slideDown(2500);
     $('#fleeShip,#returnAlien').show();
-    newCaptain.recMod(0,0,+50,0);
+    newCaptain.recMod(0,0,10,-10);
   });
 
   //when user runs away from aliens
   $('#fleeShip').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,-50,-10);
+    // plot death
+    window.location.replace('gameOver/alienAttack.html')
   });
   //when user lets alien board
   $('#returnAlien').click(function(){
-    $("body").css({"background-image": "url(img/trader.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
+    $('#alienReward').slideDown(2500);
+    $('#alienFood,#alienFuel').show();
+    newCaptain.recMod(0,0,10,0);
+  });
+
+  $('#alienFood').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
+    $('#alienReward,#alienFood,#alienFuel').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderYes,#traderNo').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(40,0,0,0);
+  });
+
+  $('#alienFuel').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
+    $('#alienReward,#alienFood,#alienFuel').hide();
+    $('#traderQuestion').slideDown(2500);
+    $('#traderYes,#traderNo').show();
+    newCaptain.recMod(0,0,0,40);
   });
   //when user clicks on Keep Going button instead of sending rescue team
   $('#ignoreAlien').click(function(){
@@ -128,14 +130,14 @@ $(document).ready(function(){
     $('#traderQuestion').slideDown(2500);
     // lose fuel
     $('#traderYes,#traderNo').show();
-    newCaptain.recMod(0,0,-20,0);
+    newCaptain.recMod(0,0,-10,-20);
   });
   //when user doesnt investigate shipwreck
   $('#shipIgnore').click(function(){
     $('#shipwreckQuestion,#shipInvestigate,#shipIgnore').hide();
     $('#upsetCrew').slideDown(2500);
     $('#beRude,#beNice').show();
-    newCaptain.recMod(0,0,-40,0);
+    newCaptain.recMod(0,0,-40,-10);
   });
   //rude response to crew
   $('#beRude').click(function(){
@@ -158,7 +160,7 @@ $(document).ready(function(){
     $('#traderQuestion').slideDown(2500);
     $('#screen').prepend('<p class="animated fadeOut">Tension dissipates as you fly past the wreck</p>');
     $('#traderYes,#traderNo').show();
-    newCaptain.recMod(10,10,-30,-10);
+    newCaptain.recMod(0,0,-30,-10);
   });
 //go back to help crew after rude response
   $('#helpCrewRude').click(function(){
@@ -166,7 +168,7 @@ $(document).ready(function(){
     $('#crewDisobey,#leaveCrew,#helpCrewRude').hide();
     $('#emptyShipwreck').slideDown(2500);
     $('#takeFuel,#takeFood').show();
-    newCaptain.recMod(-10,0,0,-10);
+    newCaptain.recMod(-10,0,0,-20);
   });
   //take fuel
   $('#takeFuel').click(function(){
@@ -174,7 +176,7 @@ $(document).ready(function(){
     $('#emptyShipwreck,#takeFood,#takeFuel').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderNo,#traderYes').show();
-    newCaptain.recMod(0,0,0,50);
+    newCaptain.recMod(0,0,0,30);
   });
   //take food
   $('#takeFood').click(function(){
@@ -196,22 +198,22 @@ $(document).ready(function(){
   $('#bargainTrap').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,0,0);
+    // plot death
+    window.location.replace('gameOver/traderDeath.html')
   });
   $('#runTrap').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#shipwreckTrap,#bargainTrap,#runTrap').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,0,0);
+    window.location.replace('gameOver/traderDeath.html')
+    // plot death
   });
 
 //when user decides to trade with the shady dude
   $('#traderYes').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#traderQuestion,#traderYes,#traderNo').hide();
-    $('#dead').show();
-    newCaptain.recMod(-30,0,0,-10);
+    window.location.replace('gameOver/traderDeath.html')
+    // plot death
   });
   //when decides not to trade with shady dude
   $('#traderNo').click(function(){
@@ -225,14 +227,14 @@ $(document).ready(function(){
     $("body").css({"background-image": "url(img/home.png)"})
     $('#hostileTrader,#giveResources,#stopTrader').hide();
     // victory
+    newCaptain.recMod(-20,-60,20,-10);
     window.location.replace('gameOver/victory.html')
-    newCaptain.recMod(-10,0,20,-10);
   });
   $('#stopTrader').click(function(){
     $("body").css({"background-image": "url(img/trader.png)"})
     $('#hostileTrader,#giveResources,#stopTrader').hide();
-    $('#dead').show();
-    newCaptain.recMod(-10,0,20,-10);
+    window.location.replace('gameOver/traderDeath.html')
+    // plot death
   });
   //when user decides to party
   $('#partyYes').click(function(){
@@ -240,20 +242,21 @@ $(document).ready(function(){
     $('#partyQuestion,#partyYes,#partyNo').hide();
     $('#QuantityParty').slideDown(2500);
     $('#getWasted,#responsible').show();
-    newCaptain.recMod(-10,-10,10,0);
+    newCaptain.recMod(-10,-10,20,0);
   });
   //when user decides NOT to party
   $('#partyNo').click(function(){
     $('#partyQuestion,#partyYes,#partyNo').hide();
-    $('#dead').show();
-    newCaptain.recMod(-30,0,0,-10);
+    $('#toastQuestion').slideDown(2500);
+    $('#eatToast,#noToast').show();
+    newCaptain.recMod(0,0,-50,0);
   });
   //When user gets rickety wrecked
   $('#getWasted').click(function(){
     $(".cockpit").css({"background-image": "url(img/cockpitdamaged.png)"})
     $('#QuantityParty,#getWasted,#responsible').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,+50,0);
+    window.location.replace('gameOver/drunkDriver.html')
+    // plot death
   });
   //when user thinks about his children and decides not to get too drunk
   $('#responsible').click(function(){
@@ -268,14 +271,16 @@ $(document).ready(function(){
     $('#toastQuestion,#eatToast,#noToast').hide();
     $('#autoPilot').slideDown(2500);
     $('#yesAuto,#noAuto').show();
-    newCaptain.recMod(-40,0,0,0);
+
+    newCaptain.recMod(-10,0,0,-10);
+
   });
   // when user decides he's too good for toast
   $('#noToast').click(function(){
     $('#toastQuestion,#eatToast,#noToast').hide();
     $('#autoPilot').slideDown(2500);
     $('#yesAuto,#noAuto').show();
-    newCaptain.recMod(0,0,0,-10);
+    newCaptain.recMod(0,0,-10,-10);
   });
   // user decides to do auto pilot
   $('#yesAuto').click(function(){
@@ -288,20 +293,20 @@ $(document).ready(function(){
   });
   $('#sleepAgain').click(function(){
     $('#asteroidDeath,#findSolution,#sleepAgain').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,0,-30);
+    window.location.replace('gameOver/autoDeath.html')
+    // plot death
   });
   $('#findSolution').click(function(){
     $('#asteroidDeath,#findSolution,#sleepAgain').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,0,-30);
+    window.location.replace('gameOver/autoDeath.html')
   });
   // user decides against autopilot
   $('#noAuto').click(function(){
     $('#autoPilot,#yesAuto,#noAuto').hide();
+    $("body").css({"background-image": "url(img/asteroids.png)"})
     $('#asteroidEscape').slideDown(2500);
     $('#dropFood,#extraFuel').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(0,0,0,-30);
   });
   //lose food to escape
     $('#dropFood').click(function(){
@@ -321,8 +326,8 @@ $(document).ready(function(){
   $('#repairAI').click(function(){
     $('#AI,#repairAI,#noRepairAI').hide();
     // victory
-    window.location.replace('gameOver/victory.html')
     newCaptain.recMod(0,0,-30,0);
+    window.location.replace('gameOver/victory.html')
   });
   // user doesnt fix the AI
   $('#noRepairAI').click(function(){
@@ -334,8 +339,8 @@ $(document).ready(function(){
   $('#betrayCrew_1').click(function(){
     $('#aiSleep,#repairAI_2,#betrayCrew_1').hide();
     // victory
-    window.location.replace('gameOver/victory.html')
     newCaptain.recMod(0,0,-50,0);
+    window.location.replace('gameOver/victory.html')
   });
 
   $('#repairAI_2').click(function(){
@@ -346,8 +351,8 @@ $(document).ready(function(){
   });
   $('#notEssential').click(function(){
     $('#professLove,#notEssential,#aiToxins').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,-30,0);
+    window.location.replace('gameOver/AiDeath.html')
+    // plot death
   });
 
   $('#professLove').click(function(){
@@ -359,29 +364,18 @@ $(document).ready(function(){
   $('#betrayCrew_2').click(function(){
     $('#professLove,#betrayCrew_2,#wasAfraid').hide();
     // victory
+
+    newCaptain.recMod(0,0,-50,-20);
     window.location.replace('gameOver/victory.html')
-    newCaptain.recMod(0,0,-50,0);
   });
   $('#wasAfraid').click(function(){
     $('#wasAfraid,#betrayCrew_2,#wasAfraid').hide();
     // victory
+    newCaptain.recMod(0,0,-30,0);
     window.location.replace('gameOver/victory.html')
-    newCaptain.recMod(0,0,-30,0);
   });
-
-  $('#betrayCrew').click(function(){
-    $('#AI,#repairAI,#noRepairAI').hide();
-    $('#dead').show();
-    newCaptain.recMod(0,0,-30,0);
-  });
-
-
-
-
-
-
   $('#selfDestruct').click(function(){
-    $('body').addClass('displayNone');
+    window.location.replace('gameOver/selfDestruct.html')
 
   });
 });

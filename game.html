@@ -62,12 +62,16 @@
                   <p>--Translation: No known Translation</p>
                   <p>It appears they will attempt to board the ship.</p>
                 </div>
+                <div class="displayNone" id="alienReward">
+                  <p>AI: The aliens are greatfull for your kindness in rescueing their comrade.</p>
+                  <p>They would like to offer you supplies as a reward</p>
+                </div>
                 <div class="displayNone" id="traderQuestion">
                   <p><span class="animated flash infinite">Incoming Message: </span><i>Howdy! Ya'll don't look like you from 'round here. I'm "the middle-of-nowhere plug" and you're in the middle of nowhere. What do you want?</i></p>
                   <p>AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
                 </div>
                 <div class="displayNone" id="hostileTrader">
-                  <p>The trader did NOT like that decision; now he's coming to throw your space salad.</p>
+                  <p><span class="animated flash infinite">Incoming message:</span> You think you can outrun my Eon Falcon?</p>
                 </div>
               </div>
 
@@ -82,7 +86,8 @@
                 </div>
 
                 <div class="displayNone" id="toastQuestion">
-                  <p>I wanted to congratulate you on your self-control, <span class ='nameInput'></span>. My audio sensors have detected a 15% increase in positive remarks about you! Let's celebrate! What do you want to do?</p>
+
+                  <p>I wanted to congratulate you on your self-control <span class ='nameInput'></span>. I made you your favorite: Space-Toast!</p>
                 </div>
                 <div class="displayNone" id="autoPilot">
                   <p>AI: <span class ='nameInput'></span>, there is a low probability of future collisions. Would you like to engage auto-pilot and cryo-sleep through the remaining voyage?</p>
@@ -91,9 +96,7 @@
                   <p>We drifted into an asteroid field while everyone was asleep and our ship is beyond repairs</p>
                 </div>
                 <div class="displayNone" id="asteroidEscape">
-                  <p> There is an asteroid field approaching! We need to lose weight ASAP if we want to navigate around this!
-
-                    We are coming up on an asteroid field, we'll have to lose some weight by dropping fuel or use extra fuel to boost out of here</p>
+                  <p> There is an asteroid field approaching! We need to lose weight NOW if we want to navigate around this!</p>
                 </div>
                 <div class="displayNone" id="AI">
                   <p>AI: A fatal anomaly has been detected in my Empathy Module. The time required to update may be unpopular with the crew...</p>
@@ -110,12 +113,6 @@
                   <p>
                     <em>PREPARING NEURO-TOXINS.</em>
                   </p>
-                  <p>
-                    <em>NEUROTOXINA FOR MY SPANISH AUDIENCE.</em>
-                  </p>
-                  <p>
-                    <em> MWAJAJAJA</em>
-                  </p>
                 </div>
                 <div class="displayNone" id="aiCries">
                   <p>But..</p>
@@ -126,9 +123,6 @@
                 </div>
               </div>
 
-              <div class="displayNone" id="mars">
-                <p>AI: My sensors indicate that we are approaching the NewTerra System. Congratulations on a completing the mission!, <span class ='nameInput'></span>?</p>
-              </div>
               <div class="displayNone" id="dead">
                 <p style="font-size: 100px">U ded, <span class ='nameInput'></span>?</p>
               </div>
@@ -176,6 +170,9 @@
 
             <button class="decisionButtons decisionLeft" id="fleeShip" type="button">Try to outrun them</button>
             <button class="decisionButtons decisionRight" id="returnAlien" type="button">Let aliens board ship</button>
+
+            <button class="decisionButtons decisionLeft" id="alienFood" type="button">We would like Food</button>
+            <button class="decisionButtons decisionRight" id="alienFuel" type="button">We would like Fuel</button>
             <!--Upset Crew -->
             <button class="decisionButtons decisionLeft" id="beRude" type="button">I dont care Im the captain here</button>
             <button class="decisionButtons decisionRight" id="beNice" type="button">Im sorry but it would be to risky</button>
@@ -203,7 +200,7 @@
             <button class="decisionButtons decisionLeft" id="findSolution" type="button">look for ways to repair the ship</button>
             <button class="decisionButtons decisionRight" id="sleepAgain" type="button">Accept your fate and go back to sleep</button>
             <button class="decisionButtons decisionLeft" id="dropFood" type="button">drop food to escape</button>
-            <button class="decisionButtons decisionRight" id="extraFuel" type="button">use extra fuel to escape</button>
+            <button class="decisionButtons decisionRight" id="extraFuel" type="button">drop fuel to escape</button>
 
 
             <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
