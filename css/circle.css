@@ -1022,6 +1022,11 @@
 .c100.green .fill {
   border-color: #4db53c !important;
 }
+
+.c100.red .bar,
+.c100.red.fill {
+  border-color: rgb(255, 0, 0) !important;
+}
 .c100.green.dark .bar,
 .c100.green.dark .fill {
   border-color: #5fd400 !important;
