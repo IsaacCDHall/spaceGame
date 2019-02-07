@@ -224,7 +224,8 @@ $(document).ready(function(){
   $('#giveResources').click(function(){
     $("body").css({"background-image": "url(img/home.png)"})
     $('#hostileTrader,#giveResources,#stopTrader').hide();
-    $('#mars').show();
+    // victory
+    window.location.replace('gameOver/victory.html')
     newCaptain.recMod(-10,0,20,-10);
   });
   $('#stopTrader').click(function(){
@@ -319,7 +320,8 @@ $(document).ready(function(){
   // user chooses to repair AI
   $('#repairAI').click(function(){
     $('#AI,#repairAI,#noRepairAI').hide();
-    $('#mars').show();
+    // victory
+    window.location.replace('gameOver/victory.html')
     newCaptain.recMod(0,0,-30,0);
   });
   // user doesnt fix the AI
@@ -331,7 +333,8 @@ $(document).ready(function(){
   });
   $('#betrayCrew_1').click(function(){
     $('#aiSleep,#repairAI_2,#betrayCrew_1').hide();
-    $('#mars').show();
+    // victory
+    window.location.replace('gameOver/victory.html')
     newCaptain.recMod(0,0,-50,0);
   });
 
@@ -355,12 +358,14 @@ $(document).ready(function(){
   });
   $('#betrayCrew_2').click(function(){
     $('#professLove,#betrayCrew_2,#wasAfraid').hide();
-    $('#mars').show();
+    // victory
+    window.location.replace('gameOver/victory.html')
     newCaptain.recMod(0,0,-50,0);
   });
   $('#wasAfraid').click(function(){
     $('#wasAfraid,#betrayCrew_2,#wasAfraid').hide();
-    $('#mars').show();
+    // victory
+    window.location.replace('gameOver/victory.html')
     newCaptain.recMod(0,0,-30,0);
   });
 
