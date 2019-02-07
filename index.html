@@ -65,6 +65,9 @@
                   <p>Incoming Message: “We don’t see many Star-ships out this way. Should we do business?”</p>
                   <p>-AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
                 </div>
+                <div class="displayNone" id="hostileTrader">
+                  <p>You refuse to trade with this guy so he decides to attack you and take what he wants by force</p>
+                </div>
               </div>
 
 
@@ -84,6 +87,9 @@
                 </div>
                 <div class="displayNone" id="asteroidDeath">
                   <p>We drifted into an asteroid field while everyone was asleep and our ship is beyond repairs</p>
+                </div>
+                <div class="displayNone" id="asteroidEscape">
+                  <p>We are coming up on an asteroid field, well have to lose some weight by dropping fuel or use extra fuel to boost out of here</p>
                 </div>
                 <div class="displayNone" id="AI">
                   <p>AI: An anomaly has been detected in my Empathy Module. It will take some time to update, which may be unpopular with the crew...</p>
@@ -171,12 +177,13 @@
             <button class="decisionButtons decisionRight" id="runTrap" type="button">Try to outrun the aliens</button>
             <button class="decisionButtons decisionLeft" id="takeFuel" type="button">Grab all the fuel you can carry</button>
             <button class="decisionButtons decisionRight" id="takeFood" type="button">Its going to be a long journey, grab all the food you can find</button>
-            <button class="decisionButtons decisionLeft" id="findSolution" type="button">look for ways to repair the ship</button>
-            <button class="decisionButtons decisionRight" id="sleepAgain" type="button">Accept your fate and go back to sleep</button>
+
 
 
             <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
             <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
+            <button class="decisionButtons decisionLeft" id="giveResources" type="button">Give him what he wants</button>
+            <button class="decisionButtons decisionRight" id="stopTrader" type="button">try to fight back against the trader</button>
             <!--Charted  -->
             <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
             <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
@@ -184,6 +191,12 @@
             <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
             <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
             <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
+            <button class="decisionButtons decisionLeft" id="findSolution" type="button">look for ways to repair the ship</button>
+            <button class="decisionButtons decisionRight" id="sleepAgain" type="button">Accept your fate and go back to sleep</button>
+            <button class="decisionButtons decisionLeft" id="dropFood" type="button">drop food to escape</button>
+            <button class="decisionButtons decisionRight" id="extraFuel" type="button">use extra fuel to escape</button>
+
+
             <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
             <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
             <!-- AI -->
