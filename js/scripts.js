@@ -115,12 +115,33 @@ $(document).ready(function(){
   });
   //when user lets alien board
   $('#returnAlien').click(function(){
-    $("body").css({"background-image": "url(img/trader.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
-    $('#traderQuestion').slideDown(2500);
-    $('#traderYes,#traderNo').show();
+    $('#alienReward').slideDown(2500);
+    $('#alienFood,#alienFuel').show();
     newCaptain.recMod(0,0,0,0);
   });
+
+  $('#alienFood').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
+    $('#alienReward,#alienFood,#aleinFuel').hide();
+    $('#traderQuestion').slideDown(2500);
+    $('#traderYes,#traderNo').show();
+    newCaptain.recMod(50,0,0,0);
+  });
+
+  $('#aleinFuel').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
+    $('#alienReward,#alienFood,#aleinFuel').hide();
+    $('#traderQuestion').slideDown(2500);
+    $('#traderYes,#traderNo').show();
+    newCaptain.recMod(0,0,0,50);
+  });
+
+
+
+
+
+
   //when user clicks on Keep Going button instead of sending rescue team
   $('#ignoreAlien').click(function(){
     $("body").css({"background-image": "url(img/trader.png)"})
