@@ -62,6 +62,10 @@
                   <p>--Translation: No known Translation</p>
                   <p>They are making an attempt to board the ship.</p>
                 </div>
+                <div class="displayNone" id="alienReward">
+                  <p>AI: The aliens are greatfull for your kindness in rescueing their comrade.</p>
+                  <p>They would like to offer you supplies as a reward</p>
+                </div>
                 <div class="displayNone" id="traderQuestion">
                   <p>Incoming Message: “We don’t see many Star-ships out this way. Should we do business?”</p>
                   <p>-AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
@@ -118,9 +122,6 @@
                 </div>
               </div>
 
-              <div class="displayNone" id="mars">
-                <p>AI: My sensors indicate that we are approaching the NewTerra System. Congratulations on a completing the mission!, <span class ='nameInput'></span>?</p>
-              </div>
               <div class="displayNone" id="dead">
                 <p style="font-size: 100px">U ded, <span class ='nameInput'></span>?</p>
               </div>
@@ -168,6 +169,9 @@
 
             <button class="decisionButtons decisionLeft" id="fleeShip" type="button">Try to outrun them</button>
             <button class="decisionButtons decisionRight" id="returnAlien" type="button">Let aliens board ship</button>
+
+            <button class="decisionButtons decisionLeft" id="alienFood" type="button">We would like Food</button>
+            <button class="decisionButtons decisionRight" id="alienFuel" type="button">We would like Fuel</button>
             <!--Upset Crew -->
             <button class="decisionButtons decisionLeft" id="beRude" type="button">I dont care Im the captain here</button>
             <button class="decisionButtons decisionRight" id="beNice" type="button">Im sorry but it would be to risky</button>

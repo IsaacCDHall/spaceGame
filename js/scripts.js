@@ -115,11 +115,26 @@ $(document).ready(function(){
   });
   //when user lets alien board
   $('#returnAlien').click(function(){
-    $("body").css({"background-image": "url(img/trader.png)"})
     $('#motherShipQuestion,#fleeShip,#returnAlien').hide();
+    $('#alienReward').slideDown(2500);
+    $('#alienFood,#alienFuel').show();
+    newCaptain.recMod(0,0,0,0);
+  });
+
+  $('#alienFood').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
+    $('#alienReward,#alienFood,#alienFuel').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderYes,#traderNo').show();
-    newCaptain.recMod(0,0,0,0);
+    newCaptain.recMod(50,0,0,0);
+  });
+
+  $('#alienFuel').click(function(){
+    $("body").css({"background-image": "url(img/trader.png)"})
+    $('#alienReward,#alienFood,#alienFuel').hide();
+    $('#traderQuestion').slideDown(2500);
+    $('#traderYes,#traderNo').show();
+    newCaptain.recMod(0,0,0,50);
   });
   //when user clicks on Keep Going button instead of sending rescue team
   $('#ignoreAlien').click(function(){
