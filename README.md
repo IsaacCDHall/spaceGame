@@ -27,6 +27,14 @@ The view it locally:
 
 _None_
 
+## Specs
+1.  The user inputs a name that is used throughout the game.
+2.  Different scenarios are presented where the user must make a choice.
+3.  The user makes decisions using two main buttons.
+5.  After they decide, new questions and choices appear.
+6.  Most decisions will change different resource levels.
+7.  Some decisions will result in an automatic Game-Over and some are based on running out of resources.
+
 ## Support and contact details
 
 _Feel free to contact any of us by sending an email._
