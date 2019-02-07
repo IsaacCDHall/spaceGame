@@ -91,7 +91,7 @@ $(document).ready(function(){
   $('#rescueAlien').click(function(){
     $("body").css({"background-image": "url(img/wreckinvestigate.png)"})
     $('#alienQuestion,#rescueAlien,#ignoreAlien').hide();
-    $('#screen').prepend('<p class="animated fadeOut">Your dog seems happier with you </p>');
+    $('#screen').prepend('<p class="animated fadeOut"> The crew approves of your decision </p>');
     $('#motherShipQuestion').slideDown(2500);
     $('#fleeShip,#returnAlien').show();
     newCaptain.recMod(0,0,10,-10);
@@ -314,6 +314,7 @@ $(document).ready(function(){
   });
   //lose food to escape
     $('#dropFood').click(function(){
+      $("body").css({"background-image": "url(img/ai.png)"})
       $('#asteroidEscape,#dropFood,#extraFuel').hide();
       $('#AI').slideDown(2500);
       $('#repairAI,#noRepairAI').show();
@@ -321,6 +322,7 @@ $(document).ready(function(){
     });
     //lose fuel to escape
     $('#extraFuel').click(function(){
+      $("body").css({"background-image": "url(img/ai.png)"})
       $('#asteroidEscape,#dropFood,#extraFuel').hide();
       $('#AI').slideDown(2500);
       $('#repairAI,#noRepairAI').show();
