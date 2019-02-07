@@ -271,7 +271,9 @@ $(document).ready(function(){
     $('#toastQuestion,#eatToast,#noToast').hide();
     $('#autoPilot').slideDown(2500);
     $('#yesAuto,#noAuto').show();
+
     newCaptain.recMod(-10,0,0,-10);
+
   });
   // when user decides he's too good for toast
   $('#noToast').click(function(){
@@ -355,7 +357,7 @@ $(document).ready(function(){
 
   $('#professLove').click(function(){
     $('#professLove,#notEssential,#aiToxins').hide();
-    $('#aiCries').slideDown(4000);
+    $('#aiCries').slideDown(5000);
     $('#wasAfraid,#betrayCrew_2').show();
     newCaptain.recMod(0,0,-30,0);
   });

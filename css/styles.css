@@ -249,3 +249,6 @@ button {
 .fadeOut{
   animation-duration: 7s;
 }
+.flash{
+  animation-duration:3s;
+}
