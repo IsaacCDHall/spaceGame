@@ -348,12 +348,12 @@ $(document).ready(function(){
     newCaptain.recMod(0,0,-30,0);
   });
   $('#betrayCrew_2').click(function(){
-    $('#professLove,#betrayCrew_2,#aiToxins').hide();
+    $('#professLove,#betrayCrew_2,#wasAfraid').hide();
     $('#mars').show();
     newCaptain.recMod(0,0,-50,0);
   });
   $('#wasAfraid').click(function(){
-    $('#wasAfraid,#betrayCrew_2,#aiCries').hide();
+    $('#wasAfraid,#betrayCrew_2,#wasAfraid').hide();
     $('#mars').show();
     newCaptain.recMod(0,0,-30,0);
   });
