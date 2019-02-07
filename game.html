@@ -44,7 +44,7 @@
                 <p>Your crew is upset you don't want to help the distressed ship</p>
                 </div>
                 <div class="displayNone" id="crewDisobey">
-                  <p>Your crew member, Matt was last seen taking an emergency pod en route to the wreckage. It appears he left an angry journal entry before departing.</p>
+                  <p>Your crew member, Max was last seen taking an emergency pod en route to the wreckage. It appears he left an angry journal entry before departing.</p>
                 </div>
                 <div class="displayNone" id="emptyShipwreck">
                   The shipwreck has no survivors but you find a stockpile of resources. We do not have enough storage to bring everything back.
@@ -67,7 +67,7 @@
                   <p>They would like to offer you supplies as a reward</p>
                 </div>
                 <div class="displayNone" id="traderQuestion">
-                  <p><span class="animated flash infinite">Incoming Message: </span><i>Howdy! Ya'll don't look like you from 'round here. I'm "the middle-of-nowhere plug" and you're in the middle of nowhere. What do you want?</i></p>
+                  <p><span class="animated flash infinite">Incoming Message: </span><i>Howdy! Ya'll don't look like you from 'round here. Need any supplies?</i></p>
                   <p>AI: I must warn you <span class ='nameInput'></span>, my records indicate that this ship has been blacklisted by the Intergalactic Trade Bureau. There is a high risk in trading. However, it is unlikely we will find other trade opportunities while traveling through this system.</p>
                 </div>
                 <div class="displayNone" id="hostileTrader">
@@ -81,8 +81,8 @@
                   <p><span class ='nameInput'></span>, there is unrest in the crew. It has been a long voyage, perhaps they need a morale boost?</p>
                 </div>
                 <div class="displayNone" id="QuantityParty">
-                  <br><br><br><br><br><br><br>
-                  <p><span class="animated flash infinite">Incoming Message: </span> “oyYo <span class ='nameInput'></span>, you gonnaa cdome thrroughw back some Space-B\eers with us || nah?"</p>
+
+                  <p><span class="animated flash infinite">Incoming Message: </span> “oyYo <span class ='nameInput'></span>, you gonnaa cdome thrroughw back some Space-B\eers with us or nah?"</p>
                 </div>
 
                 <div class="displayNone" id="toastQuestion">
@@ -166,30 +166,28 @@
             <button class="decisionButtons decisionRight" id="shipIgnore" type="button">Don't investigate</button>
             <!--Alien Branch -->
             <button class="decisionButtons decisionRight" id="rescueAlien" type="button">Send a Rescue Team</button>
-            <button class="decisionButtons decisionLeft" id="ignoreAlien" type="button">Keep Going</button>
+            <button class="decisionButtons decisionLeft" id="ignoreAlien" type="button">Leave</button>
 
             <button class="decisionButtons decisionLeft" id="fleeShip" type="button">Try to outrun them</button>
-            <button class="decisionButtons decisionRight" id="returnAlien" type="button">Let aliens board ship</button>
+            <button class="decisionButtons decisionRight" id="returnAlien" type="button">Cooperate with the aliens</button>
 
             <button class="decisionButtons decisionLeft" id="alienFood" type="button">We would like Food</button>
             <button class="decisionButtons decisionRight" id="alienFuel" type="button">We would like Fuel</button>
             <!--Upset Crew -->
-            <button class="decisionButtons decisionLeft" id="beRude" type="button">I dont care Im the captain here</button>
-            <button class="decisionButtons decisionRight" id="beNice" type="button">Im sorry but it would be to risky</button>
-            <button class="decisionButtons decisionLeft" id="leaveCrew" type="button">Leave him for the aliens</button>
-            <button class="decisionButtons decisionRight" id="helpCrewRude" type="button">Go back and help him investigate</button>
-            <button class="decisionButtons decisionRight" id="helpCrewNice" type="button">Go back and help him investigate</button>
-            <button class="decisionButtons decisionLeft" id="bargainTrap" type="button">Try to make a deal so the aliens dont kill you</button>
-            <button class="decisionButtons decisionRight" id="runTrap" type="button">Try to outrun the aliens</button>
-            <button class="decisionButtons decisionLeft" id="takeFuel" type="button">Grab all the fuel you can carry</button>
-            <button class="decisionButtons decisionRight" id="takeFood" type="button">Its going to be a long journey, grab all the food you can find</button>
-
-
+            <button class="decisionButtons decisionLeft" id="beRude" type="button">I dont care, I'm the captain here!</button>
+            <button class="decisionButtons decisionRight" id="beNice" type="button">I'm sorry, it would be too risky</button>
+            <button class="decisionButtons decisionLeft" id="leaveCrew" type="button">Leave him behind</button>
+            <button class="decisionButtons decisionRight" id="helpCrewRude" type="button">Go back and help Max</button>
+            <button class="decisionButtons decisionRight" id="helpCrewNice" type="button">Go back and help Max</button>
+            <button class="decisionButtons decisionLeft" id="bargainTrap" type="button">Beg for mercy</button>
+            <button class="decisionButtons decisionRight" id="runTrap" type="button">Make a run for it</button>
+            <button class="decisionButtons decisionLeft" id="takeFuel" type="button">Prioritize fuel</button>
+            <button class="decisionButtons decisionRight" id="takeFood" type="button">Prioritize food</button>
 
             <button class="decisionButtons decisionLeft" id="traderYes" type="button">Trade</button>
-            <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't Trade</button>
-            <button class="decisionButtons decisionLeft" id="giveResources" type="button">Give him what he wants</button>
-            <button class="decisionButtons decisionRight" id="stopTrader" type="button">try to fight back against the trader</button>
+            <button class="decisionButtons decisionRight" id="traderNo" type="button">Don't trade</button>
+            <button class="decisionButtons decisionLeft" id="giveResources" type="button">Cooperate</button>
+            <button class="decisionButtons decisionRight" id="stopTrader" type="button">Try to escape</button>
             <!--Charted  -->
             <button class="decisionButtons decisionLeft" id="partyYes" type="button">Have a Party</button>
             <button class="decisionButtons decisionRight" id="partyNo" type="button">No Party</button>
@@ -197,21 +195,21 @@
             <button class="decisionButtons decisionRight" id="noToast" type="button">Don't Eat Toast</button>
             <button class="decisionButtons decisionLeft" id="yesAuto" type="button">Engage Autopilot</button>
             <button class="decisionButtons decisionRight" id="noAuto" type="button">Keep Piloting Ship</button>
-            <button class="decisionButtons decisionLeft" id="findSolution" type="button">look for ways to repair the ship</button>
+            <button class="decisionButtons decisionLeft" id="findSolution" type="button">Look for ways to repair the ship</button>
             <button class="decisionButtons decisionRight" id="sleepAgain" type="button">Accept your fate and go back to sleep</button>
-            <button class="decisionButtons decisionLeft" id="dropFood" type="button">drop food to escape</button>
-            <button class="decisionButtons decisionRight" id="extraFuel" type="button">drop fuel to escape</button>
+            <button class="decisionButtons decisionLeft" id="dropFood" type="button">Drop food</button>
+            <button class="decisionButtons decisionRight" id="extraFuel" type="button">Drop fuel</button>
 
 
             <button class="decisionButtons decisionLeft" id="repairAI" type="button">Repair the AI</button>
             <button class="decisionButtons decisionRight" id="noRepairAI" type="button">Don't Repair</button>
             <!-- AI -->
             <button class="decisionButtons decisionLeft" id="repairAI_2" type="button">Attempt to update Empathy Module</button>
-            <button class="decisionButtons decisionRight" id="betrayCrew_1" type="button">Agree that crew is not necessary, but the captain is</button>
-            <button class="decisionButtons decisionRight" id="betrayCrew_2" type="button">The crew would not accept our love</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_1" type="button">The crew is not necessary, but the captain is</button>
+            <button class="decisionButtons decisionRight" id="betrayCrew_2" type="button">The crew would not understand our love</button>
             <button class="decisionButtons decisionLeft" id="professLove" type="button">Profess your love for the AI</button>
             <button class="decisionButtons decisionLeft" id="wasAfraid" type="button">I was afraid of how much I love you</button>
-            <button class="decisionButtons decisionRight" id="notEssential" type="button">Don't you agree that it was non-essential?</button>
+            <button class="decisionButtons decisionRight" id="notEssential" type="button">It was non-essential!</button>
 
 
             <button class="decisionButtons decisionLeft" id="getWasted" type="button">Rickety-rickety wrecked, son!</button>
