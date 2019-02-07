@@ -123,25 +123,19 @@ $(document).ready(function(){
 
   $('#alienFood').click(function(){
     $("body").css({"background-image": "url(img/trader.png)"})
-    $('#alienReward,#alienFood,#aleinFuel').hide();
+    $('#alienReward,#alienFood,#alienFuel').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderYes,#traderNo').show();
     newCaptain.recMod(50,0,0,0);
   });
 
-  $('#aleinFuel').click(function(){
+  $('#alienFuel').click(function(){
     $("body").css({"background-image": "url(img/trader.png)"})
-    $('#alienReward,#alienFood,#aleinFuel').hide();
+    $('#alienReward,#alienFood,#alienFuel').hide();
     $('#traderQuestion').slideDown(2500);
     $('#traderYes,#traderNo').show();
     newCaptain.recMod(0,0,0,50);
   });
-
-
-
-
-
-
   //when user clicks on Keep Going button instead of sending rescue team
   $('#ignoreAlien').click(function(){
     $("body").css({"background-image": "url(img/trader.png)"})
